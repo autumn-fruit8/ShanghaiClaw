@@ -1,0 +1,53 @@
+{
+  "plan_id": "us_hb",
+  "plan_version": 1,
+  "snapshot_date": "2026-05-01",
+  "currency": "USD",
+  "total_market_value": 17214.59,
+  "positions": [
+    {
+      "symbol": "SPYM",
+      "name": "S&P 500",
+      "sleeve": "equity",
+      "shares": 20.0,
+      "current_price": 86.43,
+      "market_value": 1728.6000000000001,
+      "plan_weight": 0.25,
+      "actual_weight": 0.0672,
+      "drift": 0.1828
+    },
+    {
+      "symbol": "TLT",
+      "name": "iShares 20+ Year Treasury Bond ETF",
+      "sleeve": "bonds",
+      "shares": 0.0,
+      "current_price": 86.215,
+      "market_value": 0.0,
+      "plan_weight": 0.25,
+      "actual_weight": 0.0,
+      "drift": -0.25
+    },
+    {
+      "symbol": "GLDM",
+      "name": "SPDR Gold MiniShares",
+      "sleeve": "gold",
+      "shares": 30.0,
+      "current_price": 93.91,
+      "market_value": 2817.2999999999997,
+      "plan_weight": 0.25,
+      "actual_weight": 0.112,
+      "drift": 0.138
+    },
+    {
+      "symbol": "BIL",
+      "name": "SPDR Bloomberg 1-3 Month T-Bill ETF",
+      "sleeve": "cash",
+      "shares": 139.0,
+      "current_price": 91.435,
+      "market_value": 12709.465,
+      "plan_weight": 0.25,
+      "actual_weight": 0.5094,
+      "drift": -0.2594
+    }
+  ]
+}

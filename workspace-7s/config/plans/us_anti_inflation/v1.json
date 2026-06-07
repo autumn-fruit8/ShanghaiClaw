@@ -1,0 +1,141 @@
+{
+  "plan_id": "us_anti_inflation",
+  "version": 1,
+  "created": "2026-05-02",
+  "region": "US",
+  "currency": "USD",
+  "target_total_market_value": 25000,
+  "description": "Anti-inflation basket: commodity, equity, and dividend exposures for protection and growth during inflationary regimes.",
+  "objective": "Risk-parity across commodity, equity, and dividend sleeves. 8 assets, equal-weight at 0.125 each.",
+  "sleeves": [
+    {
+      "label": "equity",
+      "target_weight": 0.375,
+      "assets": [
+        {
+          "symbol": "MOAT",
+          "name": "VanEck Morningstar Wide Moat",
+          "role": "quality_equity",
+          "preferred": true
+        },
+        {
+          "symbol": "QQQM",
+          "name": "Invesco Nasdaq-100",
+          "role": "growth_equity",
+          "preferred": true
+        },
+        {
+          "symbol": "USMV",
+          "name": "iShares MSCI USA Min Vol",
+          "role": "low_vol_equity",
+          "preferred": true
+        }
+      ]
+    },
+    {
+      "label": "commodity",
+      "target_weight": 0.25,
+      "assets": [
+        {
+          "symbol": "VDE",
+          "name": "Vanguard Energy",
+          "role": "energy_commodity",
+          "preferred": true
+        },
+        {
+          "symbol": "DBC",
+          "name": "Invesco DB Commodity Index",
+          "role": "broad_commodity",
+          "preferred": true
+        }
+      ]
+    },
+    {
+      "label": "dividend",
+      "target_weight": 0.375,
+      "assets": [
+        {
+          "symbol": "SCHD",
+          "name": "Schwab US Dividend Equity",
+          "role": "us_dividend",
+          "preferred": true
+        },
+        {
+          "symbol": "SCHY",
+          "name": "Schwab Intl Dividend",
+          "role": "intl_dividend",
+          "preferred": true
+        },
+        {
+          "symbol": "PKW",
+          "name": "Invesco Buyback Achievers",
+          "role": "buyback_equity",
+          "preferred": true
+        }
+      ]
+    }
+  ],
+  "all_assets": [
+    {
+      "symbol": "MOAT",
+      "name": "VanEck Morningstar Wide Moat",
+      "preferred": true,
+      "target_weight": 0.125,
+      "role": "equity"
+    },
+    {
+      "symbol": "QQQM",
+      "name": "Invesco Nasdaq-100",
+      "preferred": true,
+      "target_weight": 0.125,
+      "role": "equity"
+    },
+    {
+      "symbol": "USMV",
+      "name": "iShares MSCI USA Min Vol",
+      "preferred": true,
+      "target_weight": 0.125,
+      "role": "equity"
+    },
+    {
+      "symbol": "VDE",
+      "name": "Vanguard Energy",
+      "preferred": true,
+      "target_weight": 0.125,
+      "role": "commodity"
+    },
+    {
+      "symbol": "DBC",
+      "name": "Invesco DB Commodity Index",
+      "preferred": true,
+      "target_weight": 0.125,
+      "role": "commodity"
+    },
+    {
+      "symbol": "SCHD",
+      "name": "Schwab US Dividend Equity",
+      "preferred": true,
+      "target_weight": 0.125,
+      "role": "dividend"
+    },
+    {
+      "symbol": "SCHY",
+      "name": "Schwab Intl Dividend",
+      "preferred": true,
+      "target_weight": 0.125,
+      "role": "dividend"
+    },
+    {
+      "symbol": "PKW",
+      "name": "Invesco Buyback Achievers",
+      "preferred": true,
+      "target_weight": 0.125,
+      "role": "dividend"
+    }
+  ],
+  "constraints": {
+    "max_single_sleeve_drift": 0.05,
+    "max_single_asset_drift": 0.03,
+    "rebalance_cooldown_days": 14
+  }
+}

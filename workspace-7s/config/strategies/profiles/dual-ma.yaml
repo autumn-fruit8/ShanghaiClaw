@@ -1,0 +1,10 @@
+name: dual-ma
+description: 双均线信号集：SMA100/250 交叉、价格相对位置
+indicators:
+  sma: [100, 250]
+  ma_cross:
+    fast: 100
+    slow: 250
+  price_above_ma: [100, 250]
+  roc:
+    window: 20

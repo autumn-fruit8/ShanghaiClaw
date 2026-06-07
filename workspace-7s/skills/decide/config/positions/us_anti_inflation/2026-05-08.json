@@ -1,0 +1,97 @@
+{
+  "plan_id": "us_anti_inflation",
+  "plan_version": 1,
+  "snapshot_date": "2026-05-01",
+  "currency": "USD",
+  "total_market_value": 2721.63,
+  "positions": [
+    {
+      "symbol": "MOAT",
+      "name": "VanEck Morningstar Wide Moat",
+      "sleeve": "equity",
+      "shares": 4.0,
+      "current_price": 102.155,
+      "market_value": 408.62,
+      "plan_weight": 0.125,
+      "actual_weight": 0.0162,
+      "drift": 0.1088
+    },
+    {
+      "symbol": "QQQM",
+      "name": "Invesco Nasdaq-100",
+      "sleeve": "equity",
+      "shares": 2.0,
+      "current_price": 286.585,
+      "market_value": 573.17,
+      "plan_weight": 0.125,
+      "actual_weight": 0.0219,
+      "drift": 0.1031
+    },
+    {
+      "symbol": "USMV",
+      "name": "iShares MSCI USA Min Vol",
+      "sleeve": "equity",
+      "shares": 4.0,
+      "current_price": 94.375,
+      "market_value": 377.5,
+      "plan_weight": 0.125,
+      "actual_weight": 0.0151,
+      "drift": 0.1099
+    },
+    {
+      "symbol": "VDE",
+      "name": "Vanguard Energy",
+      "sleeve": "commodity",
+      "shares": 3.0,
+      "current_price": 158.53,
+      "market_value": 475.59000000000003,
+      "plan_weight": 0.125,
+      "actual_weight": 0.0194,
+      "drift": 0.1056
+    },
+    {
+      "symbol": "DBC",
+      "name": "Invesco DB Commodity Index",
+      "sleeve": "commodity",
+      "shares": 0.0,
+      "current_price": 29.7699,
+      "market_value": 0.0,
+      "plan_weight": 0.125,
+      "actual_weight": 0.0,
+      "drift": -0.125
+    },
+    {
+      "symbol": "SCHD",
+      "name": "Schwab US Dividend Equity",
+      "sleeve": "dividend",
+      "shares": 10.0,
+      "current_price": 31.4701,
+      "market_value": 314.70099999999996,
+      "plan_weight": 0.125,
+      "actual_weight": 0.0125,
+      "drift": 0.1125
+    },
+    {
+      "symbol": "SCHY",
+      "name": "Schwab Intl Dividend",
+      "sleeve": "dividend",
+      "shares": 10.0,
+      "current_price": 32.38,
+      "market_value": 323.8,
+      "plan_weight": 0.125,
+      "actual_weight": 0.0129,
+      "drift": 0.1121
+    },
+    {
+      "symbol": "PKW",
+      "name": "Invesco Buyback Achievers",
+      "sleeve": "dividend",
+      "shares": 2.0,
+      "current_price": 137.31,
+      "market_value": 274.62,
+      "plan_weight": 0.125,
+      "actual_weight": 0.011,
+      "drift": 0.114
+    }
+  ]
+}

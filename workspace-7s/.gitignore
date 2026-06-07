@@ -1,0 +1,26 @@
+
+adhoc/
+apply_trade.csv
+*.egg-info/
+.env
+# Environment
+.env.local
+# Generated state (do not commit)
+MEMORY.md
+memory/*
+!memory/README.md
+# IDE
+.idea/
+logs/*
+!logs/README.md
+*.pyc
+__pycache__/
+*.pyo
+.pytest_cache/
+# Python
+*.swo
+*.swp
+.venv/
+venv/
+.vscode/
+backups/

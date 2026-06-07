@@ -1,0 +1,94 @@
+{
+  "schema_version": "state-db-v1",
+  "state": "active",
+  "assets": [
+    {
+      "symbol": "159207"
+    },
+    {
+      "symbol": "159222"
+    },
+    {
+      "symbol": "159263"
+    },
+    {
+      "symbol": "159307"
+    },
+    {
+      "symbol": "159547"
+    },
+    {
+      "symbol": "012708"
+    },
+    {
+      "symbol": "003376"
+    },
+    {
+      "symbol": "005754"
+    },
+    {
+      "symbol": "000218"
+    },
+    {
+      "symbol": "DBC"
+    },
+    {
+      "symbol": "GLDM"
+    },
+    {
+      "symbol": "MOAT"
+    },
+    {
+      "symbol": "PKW"
+    },
+    {
+      "symbol": "QQQM"
+    },
+    {
+      "symbol": "SCHD"
+    },
+    {
+      "symbol": "SCHY"
+    },
+    {
+      "symbol": "SPYM"
+    },
+    {
+      "symbol": "USMV"
+    },
+    {
+      "symbol": "VDE"
+    },
+    {
+      "symbol": "TLT"
+    },
+    {
+      "symbol": "BIL"
+    },
+    {
+      "symbol": "159259"
+    },
+    {
+      "symbol": "510310"
+    },
+    {
+      "symbol": "512050"
+    },
+    {
+      "symbol": "159209",
+      "sleeve": ""
+    },
+    {
+      "symbol": "159952",
+      "sleeve": ""
+    },
+    {
+      "symbol": "XLU",
+      "sleeve": "equity"
+    },
+    {
+      "symbol": "XLV",
+      "sleeve": "equity"
+    }
+  ]
+}

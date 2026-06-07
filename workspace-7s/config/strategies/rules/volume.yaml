@@ -1,0 +1,71 @@
+# =============================================================================
+# Volume Analysis Rules
+#
+# Volume signal is computed at the signal layer (volume.py), not enrichment.
+# Combined with price direction (ROC) to produce structured vol_signal.
+# =============================================================================
+
+# ── Volume ratio thresholds (vs 20-day moving average) ──────────────────────
+vol_ratio:
+  surge:  { gt: 1.5 }       # 放量 > 1.5x
+  normal: { between: [0.7, 1.5] }  # 正常区间
+  shrink: { lt: 0.7 }       # 缩量 < 0.7x
+
+# ── Price direction (ROC thresholds) ────────────────────────────────────────
+roc:
+  up:     { gt: 0.0 }       # 上涨
+  down:   { lt: 0.0 }       # 下跌
+  flat:   { between: [-0.5, 0.5] }  # 横盘 (ROC%)
+
+# ── Volume × Price combination rules ────────────────────────────────────────
+#
+# These produce structured vol_signal values that can be used by
+# strategy engine (engine.py) and report rendering (report_pusher).
+#
+# Priority: first match wins (top = strongest signal).
+volume_signals:
+
+  # ── Trend confirmation (volume confirms the move) ──
+  - when:
+      vol_ratio: surge
+      roc: up
+    signal: CONFIRM_BULLISH      # 放量上涨 → 趋势确认
+    memo: "放量上涨，趋势确认"
+
+  - when:
+      vol_ratio: surge
+      roc: down
+    signal: CONFIRM_BEARISH      # 放量下跌 → 趋势确认
+    memo: "放量下跌，趋势确认"
+
+  # ── Exhaustion (price weakening on volume) ──
+  - when:
+      vol_ratio: shrink
+      roc: down
+    signal: EXHAUSTION           # 缩量下跌 → 做空力量衰竭
+    memo: "缩量下跌，做空衰竭"
+
+  - when:
+      vol_ratio: shrink
+      roc: up
+    signal: WEAKEN               # 缩量上涨 → 上涨动力不足
+    memo: "缩量上涨，动力不足"
+
+  # ── Abnormal (price flat but volume spiking) ──
+  - when:
+      vol_ratio: surge
+      roc: flat
+    signal: ABNORMAL             # 放量横盘 → 异动
+    memo: "异动放量，关注突破方向"
+
+  # ── Normal / Quiet ──
+  - when:
+      vol_ratio: normal
+    signal: NORMAL               # 正常交易量
+    memo: "量能正常"
+
+  # ── Fallback ──
+  - when:
+      vol_ratio: shrink
+    signal: QUIET                # 缩量但无价格信息
+    memo: "市场冷淡"

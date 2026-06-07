@@ -1,0 +1,23 @@
+{
+  "932": {
+    "suffix": "CNY010",
+    "confidence": "high"
+  },
+  "93": {
+    "suffix": "CNY01",
+    "confidence": "high"
+  },
+  "000": {
+    "suffix": "CNY010",
+    "confidence": "medium"
+  },
+  "399": {
+    "suffix": "CNY01",
+    "confidence": "low"
+  },
+  "92": {
+    "suffix": "",
+    "confidence": "high",
+    "note": "direct CSI TR code (e.g. 921446, 921468)"
+  }
+}

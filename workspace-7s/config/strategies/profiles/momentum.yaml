@@ -1,0 +1,15 @@
+name: momentum
+description: 动量信号集：均线位置、变化率、趋势强度、OLS斜率、量比
+indicators:
+  rsi:
+    window: 14
+  roc:
+    window: 20
+  slope:
+    window: 20
+  adx:
+    window: 14
+  sma: [200]
+  price_above_ma: [60, 200]
+  vol_ratio:
+    window: 20

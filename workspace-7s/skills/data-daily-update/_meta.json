@@ -1,0 +1,14 @@
+{
+  "skill_id": "data-daily-update",
+  "version": "1.0.0",
+  "description": "Infrastructure update layer: incrementally refreshes processed CN or US daily price history for the configured asset universe.",
+  "implements": "docs/requirements/7s/data_daily_update_spec.md",
+  "entry_point": "scripts/run_daily_update.py",
+  "regions": ["cn", "us", "all"],
+  "cli": {
+    "args": ["--region cn|us|all"]
+  },
+  "outputs": {
+    "processed_history": "knowledge/{region}/3_processed/{symbol}.csv"
+  }
+}

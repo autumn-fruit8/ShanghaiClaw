@@ -1,0 +1,78 @@
+{
+  "region": "US",
+  "currency": "USD",
+  "name": "us_anti_inflation",
+  "target_market_value": 25000,
+  "constraints": {
+    "drift_threshold": 0.05,
+    "max_weight": 1.0,
+    "min_weight": 0.0
+  },
+  "created": "2026-05-02",
+  "all_assets": [
+    {
+      "symbol": "MOAT",
+      "name": "VanEck Morningstar Wide Moat",
+      "target_weight": 0.193398,
+      "preferred": true,
+      "risk_volatility": 0.16162580975441326,
+      "role": "equity"
+    },
+    {
+      "symbol": "QQQM",
+      "name": "Invesco Nasdaq-100",
+      "target_weight": 0.089667,
+      "preferred": true,
+      "risk_volatility": 0.22521412361327417,
+      "role": "equity"
+    },
+    {
+      "symbol": "USMV",
+      "name": "iShares MSCI USA Min Vol",
+      "target_weight": 0.204676,
+      "preferred": true,
+      "risk_volatility": 0.12096653458069874,
+      "role": "equity"
+    },
+    {
+      "symbol": "VDE",
+      "name": "Vanguard Energy",
+      "target_weight": 0.075621,
+      "preferred": true,
+      "risk_volatility": 0.2655600225330838,
+      "role": "commodity"
+    },
+    {
+      "symbol": "DBC",
+      "name": "Invesco DB Commodity Index",
+      "target_weight": 0.05459,
+      "preferred": true,
+      "risk_volatility": 0.19252042817453968,
+      "role": "commodity"
+    },
+    {
+      "symbol": "SCHD",
+      "name": "Schwab US Dividend Equity",
+      "target_weight": 0.098803,
+      "preferred": true,
+      "risk_volatility": 0.1439425382803945,
+      "role": "dividend"
+    },
+    {
+      "symbol": "SCHY",
+      "name": "Schwab Intl Dividend",
+      "target_weight": 0.14616,
+      "preferred": true,
+      "risk_volatility": 0.1182954628749101,
+      "role": "dividend"
+    },
+    {
+      "symbol": "PKW",
+      "name": "Invesco Buyback Achievers",
+      "target_weight": 0.137085,
+      "preferred": true,
+      "risk_volatility": 0.17438638910214113,
+      "role": "dividend"
+    }
+  ]
+}

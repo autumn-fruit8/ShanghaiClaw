@@ -1,0 +1,548 @@
+{
+  "version": 1,
+  "jobs": [
+    {
+      "id": "jarvis-daily-cn",
+      "agentId": "jarvis",
+      "name": "Jarvis CN Daily Update",
+      "description": "CN market daily data update via akshare. Runs Tue-Sat at 4:00 AM Beijing time (after CN_OTC NAV publish).",
+      "enabled": true,
+      "createdAtMs": 1773820638291,
+      "updatedAtMs": 1779134494727,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 4 * * 2-6",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run daily update for CN region. Execute: python3 skills/daily-update/scripts/run_daily_update.py --region cn. Summarize results in clean table format.",
+        "thinking": "off"
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "feishu",
+        "to": "chat:oc_36e0763facff69ea1016dc5bdb2ced12"
+      },
+      "state": {
+        "nextRunAtMs": 1779220800000,
+        "lastRunAtMs": 1779134400006,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 94721,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "lastDelivered": true
+      }
+    },
+    {
+      "id": "jarvis-strategy-cn",
+      "agentId": "jarvis",
+      "name": "Jarvis CN Strategy",
+      "description": "CN market strategy analysis. Runs Tue-Sat at 4:45 AM Beijing time (after daily update).",
+      "enabled": true,
+      "createdAtMs": 1773820666610,
+      "updatedAtMs": 1779137131688,
+      "schedule": {
+        "kind": "cron",
+        "expr": "45 4 * * 2-6",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run strategy analysis for CN region. Execute: python3 skills/strategy/scripts/run_strategy.py --region cn. Summarize signals in clean table format.",
+        "thinking": "off"
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "feishu",
+        "to": "chat:oc_36e0763facff69ea1016dc5bdb2ced12"
+      },
+      "state": {
+        "nextRunAtMs": 1779223500000,
+        "lastRunAtMs": 1779137100011,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 31677,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "lastDelivered": true
+      }
+    },
+    {
+      "id": "jarvis-daily-us",
+      "agentId": "jarvis",
+      "name": "Jarvis US Daily Update",
+      "description": "US market daily data update via yfinance. Runs Tue-Sat at 6:00 AM Beijing time (after US market close).",
+      "enabled": true,
+      "createdAtMs": 1773820670171,
+      "updatedAtMs": 1779141645857,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 6 * * 2-6",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run daily update for US region. Execute: python3 skills/daily-update/scripts/run_daily_update.py --region us. Summarize results in clean table format.",
+        "thinking": "off"
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "feishu",
+        "to": "chat:oc_36e0763facff69ea1016dc5bdb2ced12"
+      },
+      "state": {
+        "nextRunAtMs": 1779228000000,
+        "lastRunAtMs": 1779141600007,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 45850,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "lastDelivered": true
+      }
+    },
+    {
+      "id": "jarvis-strategy-us",
+      "agentId": "jarvis",
+      "name": "Jarvis US Strategy",
+      "description": "US market strategy analysis. Runs Tue-Sat at 6:45 AM Beijing time (after daily update).",
+      "enabled": true,
+      "createdAtMs": 1773820673704,
+      "updatedAtMs": 1779144340424,
+      "schedule": {
+        "kind": "cron",
+        "expr": "45 6 * * 2-6",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run strategy analysis for US region. Execute: python3 skills/strategy/scripts/run_strategy.py --region us. Summarize signals in clean table format.",
+        "thinking": "off"
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "feishu",
+        "to": "chat:oc_36e0763facff69ea1016dc5bdb2ced12"
+      },
+      "state": {
+        "nextRunAtMs": 1779230700000,
+        "lastRunAtMs": 1779144300007,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 40417,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "lastDelivered": true
+      }
+    },
+    {
+      "id": "jarvis-daily-push",
+      "agentId": "jarvis",
+      "name": "Jarvis Daily Push",
+      "description": "Daily market report push to Feishu. Runs Tue-Sat at 8:00 AM Beijing time.",
+      "enabled": true,
+      "createdAtMs": 1773820689269,
+      "updatedAtMs": 1779148838160,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 8 * * 2-6",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Generate and send daily market report. Execute: python3 skills/report/scripts/report_pusher.py --type daily --region all. Send markdown + PNG to Feishu.",
+        "thinking": "off"
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "feishu",
+        "to": "chat:oc_36e0763facff69ea1016dc5bdb2ced12"
+      },
+      "state": {
+        "nextRunAtMs": 1779235200000,
+        "lastRunAtMs": 1779148800013,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 38147,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "lastDelivered": true
+      }
+    },
+    {
+      "id": "jarvis-weekly-push",
+      "agentId": "jarvis",
+      "name": "Jarvis Weekly Push",
+      "description": "Weekly market report push to Feishu. Runs Sunday at 9:00 AM Beijing time.",
+      "enabled": true,
+      "createdAtMs": 1773820693123,
+      "updatedAtMs": 1778979625380,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 9 * * 0",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Generate and send weekly market report. Execute: python3 skills/report/scripts/report_pusher.py --type weekly --region all. Send markdown + PNG to Feishu.",
+        "thinking": "off"
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "feishu",
+        "to": "chat:oc_36e0763facff69ea1016dc5bdb2ced12"
+      },
+      "state": {
+        "nextRunAtMs": 1779584400000,
+        "lastRunAtMs": 1778979600008,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 25372,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "lastDelivered": true
+      }
+    },
+    {
+      "id": "samantha-agentic-write-daily",
+      "agentId": "samantha",
+      "name": "Samantha Daily Article (Agentic)",
+      "description": "L3 autonomous article generation: research \u2192 planner \u2192 writer \u2192 editor \u2192 publish. Runs daily at 6:00 AM Beijing.",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 7 * * *",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Execute agentic-writer skill.\n\nRead skills/agentic-writer/SKILL.md and follow its 5-phase pipeline.\n\nUse `date +%Y-%m-%d` to get today's date (Beijing time).\nEnsure TAVILY_API_KEY is set in .env before starting.",
+        "thinking": "off"
+      },
+      "delivery": {
+        "mode": "announce",
+        "to": "chat:oc_2d9c06b91f63435d858092a2912293c7",
+        "channel": "feishu"
+      },
+      "state": {
+        "nextRunAtMs": 1779231600000,
+        "lastRunAtMs": 1779145200005,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 540825,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "lastDelivered": true
+      },
+      "updatedAtMs": 1779145740830
+    },
+    {
+      "id": "samantha-self-learning-weekly",
+      "agentId": "samantha",
+      "name": "Samantha Weekly Self-Learning",
+      "description": "Analyze past week's articles, extract patterns, update self-learning knowledge. Runs Sunday at 7:00 AM Beijing.",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 7 * * 0",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "\u6267\u884c\u81ea\u5b66\u4e60\uff1a1) \u8bfb\u53d6\u8fc7\u53bb\u4e00\u5468\u751f\u6210\u7684\u6240\u6709\u6587\u7ae0\uff08knowledge/agentic-writing/*.md\uff092) \u5206\u6790\u6210\u529f\u6a21\u5f0f\u548c\u5931\u8d25\u6a21\u5f0f 3) \u63d0\u53d6\u5199\u4f5c\u98ce\u683c\u7279\u5f81 4) \u751f\u6210\u81ea\u5b66\u4e60\u62a5\u544a\u4fdd\u5b58\u5230knowledge/self-learning/YYYY-MM-DD.md 5) \u901a\u77e5\u5b8c\u6210\u72b6\u6001",
+        "thinking": "off"
+      },
+      "delivery": {
+        "mode": "announce",
+        "to": "chat:oc_2d9c06b91f63435d858092a2912293c7",
+        "channel": "feishu"
+      },
+      "state": {
+        "nextRunAtMs": 1779577200000,
+        "lastRunAtMs": 1778973001226,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 83996,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "lastDelivered": true
+      },
+      "updatedAtMs": 1778973085222
+    },
+    {
+      "id": "daily-digest",
+      "agentId": "main",
+      "name": "Daily Digest",
+      "description": "Fetch RSS feeds from high-quality sources. Runs daily at 6:00 AM Beijing.",
+      "enabled": true,
+      "createdAtMs": 1774179263722,
+      "updatedAtMs": 1779141679669,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 6 * * *",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Fetch RSS feeds for daily digest:\n1. Execute: bash skills/daily-digest/scripts/fetch.sh\n2. Verify data/feeds/YYYY-MM-DD/ has today's feeds\n3. Reply with feed count and sources fetched",
+        "thinking": "off"
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "feishu",
+        "to": "user:ou_00331cdd7bcf352e06ba630ad19ecddc"
+      },
+      "state": {
+        "nextRunAtMs": 1779228000000,
+        "lastRunAtMs": 1779141645857,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 33812,
+        "lastDelivered": true,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0
+      }
+    },
+    {
+      "id": "samantha-topic-scout",
+      "agentId": "samantha",
+      "name": "Samantha Topic Scout",
+      "description": "Pre-scout: archive \u2192 stage \u2192 parse (Python, no LLM). 6:15 AM Beijing.",
+      "enabled": true,
+      "createdAtMs": 1774159372873,
+      "updatedAtMs": 1779142521117,
+      "schedule": {
+        "kind": "cron",
+        "expr": "15 6 * * *",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Execute topic-scout skill.\n\nRead skills/topic-scout/SKILL.md and follow its pipeline.\n\nUse `date +%Y-%m-%d` to get today's date (Beijing time).",
+        "thinking": "off"
+      },
+      "delivery": {
+        "mode": "announce",
+        "to": "chat:oc_2d9c06b91f63435d858092a2912293c7",
+        "channel": "feishu"
+      },
+      "state": {
+        "nextRunAtMs": 1779228900000,
+        "lastRunAtMs": 1779142500007,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 21110,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "lastDelivered": true
+      },
+      "env": {
+        "SAMANTHA_FEISHU_CHAT_ID": "oc_2d9c06b91f63435d858092a2912293c7"
+      }
+    },
+    {
+      "id": "samantha-topic-screen",
+      "agentId": "samantha",
+      "name": "Samantha Topic Screen",
+      "description": "LLM score + Feishu push. Reads 2_stage/ from topic-scout. 6:45 AM Beijing.",
+      "enabled": true,
+      "createdAtMs": 1774217700000,
+      "updatedAtMs": 1779144429853,
+      "schedule": {
+        "kind": "cron",
+        "expr": "45 6 * * *",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Execute topic-screen skill.\n\nRead skills/topic-screen/SKILL.md and follow its pipeline.\n\nUse `date +%Y-%m-%d` to get today's date (Beijing time).",
+        "thinking": "off"
+      },
+      "delivery": {
+        "mode": "announce",
+        "to": "chat:oc_2d9c06b91f63435d858092a2912293c7",
+        "channel": "feishu"
+      },
+      "state": {
+        "nextRunAtMs": 1779230700000,
+        "lastRunAtMs": 1779144340424,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 89429,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "lastDelivered": true
+      },
+      "env": {
+        "SAMANTHA_FEISHU_CHAT_ID": "oc_2d9c06b91f63435d858092a2912293c7"
+      }
+    },
+    {
+      "id": "main-daily-backup",
+      "agentId": "main",
+      "name": "OpenClaw Daily Backup",
+      "description": "Daily backup of workspaces, skills, and cron configs to /root/data/backups. Runs at 2:00 AM Beijing time.",
+      "enabled": true,
+      "createdAtMs": 1774181071994,
+      "updatedAtMs": 1779127218370,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 2 * * *",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run daily backup:\\n1. Execute: bash /root/.openclaw/workspace/backup-daily.sh\\n2. Verify backup file exists in /root/data/backups/\\n3. Reply with backup status and file size"
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "feishu",
+        "to": "user:ou_00331cdd7bcf352e06ba630ad19ecddc"
+      },
+      "state": {
+        "nextRunAtMs": 1779213600000,
+        "lastRunAtMs": 1779127200008,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 18362,
+        "lastDelivered": true,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0
+      }
+    },
+    {
+      "id": "7s-update-position",
+      "agentId": "7s",
+      "name": "7S Update Positions",
+      "description": "Update CN and US positions with latest prices from CSV. Runs Tue-Sat at 6:15 AM Beijing time (after US market data available).",
+      "enabled": true,
+      "createdAtMs": 1778097600000,
+      "updatedAtMs": 1779142529663,
+      "schedule": {
+        "kind": "cron",
+        "expr": "15 6 * * 2-6",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Update all positions with latest prices from CSVs. Use the exec tool to run the following commands:\ncd /root/.openclaw/workspace-7s && python3 skills/update_position/scripts/update_position.py refresh --plan cn_anti_lost_30 cn_hb us_anti_inflation us_hb\nAfter the command completes, summarize the updated details (prices and total market value for each plan).",
+        "thinking": "off"
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "feishu",
+        "to": "chat:oc_420901ae38655b941223742c23e6f9be"
+      },
+      "state": {
+        "nextRunAtMs": 1779228900000,
+        "lastRunAtMs": 1779142521117,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 8546,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "lastDelivered": true
+      }
+    },
+    {
+      "id": "7s-daily-analyze-cn-active",
+      "agentId": "7s",
+      "name": "7S Analyze CN Active",
+      "description": "7S CN active holdings analysis. Runs Tue-Sat at 4:00 AM Beijing time.",
+      "enabled": true,
+      "createdAtMs": 1773820638291,
+      "updatedAtMs": 1779134634596,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 4 * * 2-6",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run 7S active analysis for CN region. Execute: cd workspace-7s && python3 skills/analyze/scripts/analyze.py --region cn --cron. Write logs/snapshots and logs/reports.",
+        "thinking": "off"
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "feishu",
+        "to": "chat:oc_420901ae38655b941223742c23e6f9be"
+      },
+      "state": {
+        "nextRunAtMs": 1779220800000,
+        "lastRunAtMs": 1779134494727,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 139869,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "lastDelivered": true
+      }
+    },
+    {
+      "id": "7s-daily-analyze-us-active",
+      "agentId": "7s",
+      "name": "7S Analyze US Active",
+      "description": "7S US active holdings analysis. Runs Tue-Sat at 6:00 AM Beijing time.",
+      "enabled": true,
+      "createdAtMs": 1773820638291,
+      "updatedAtMs": 1779141798018,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 6 * * 2-6",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run 7S active analysis for US region. Execute: cd workspace-7s && python3 skills/analyze/scripts/analyze.py --region us --cron. Write logs/snapshots and logs/reports.",
+        "thinking": "off"
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "feishu",
+        "to": "chat:oc_420901ae38655b941223742c23e6f9be"
+      },
+      "state": {
+        "nextRunAtMs": 1779228000000,
+        "lastRunAtMs": 1779141679669,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 118349,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "lastDelivered": true
+      }
+    }
+  ]
+}

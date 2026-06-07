@@ -1,0 +1,20 @@
+name: dual-ma-follow
+description: 双均线金叉死叉跟踪策略。SMA100 上穿 SMA250 买入，下穿卖出。适用于 VOLATILE 周期股和趋势清晰的 MOMENTUM 资产。
+rules:
+  # Priority 1: Golden cross (SMA100 crosses above SMA250) → buy
+  - id: golden_cross
+    label: 金叉买入
+    when:
+      - ma_cross: { eq: 1 }
+    do: { verb: BUY, fraction: 1.0 }
+    signal: GOLDEN_CROSS
+    cooldown: 10
+
+  # Priority 2: Death cross (SMA100 crosses below SMA250) → sell
+  - id: death_cross
+    label: 死叉卖出
+    when:
+      - ma_cross: { eq: -1 }
+    do: { verb: SELL, fraction: 1.0 }
+    signal: DEATH_CROSS
+    cooldown: 10

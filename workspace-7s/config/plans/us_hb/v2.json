@@ -1,0 +1,76 @@
+{
+  "plan_id": "us_hb",
+  "version": 2,
+  "created": "2026-05-21",
+  "region": "US",
+  "currency": "USD",
+  "target_total_market_value": 25000,
+  "description": "Simplified US HB: equities + gold + T-bills, equal-weight, no long Treasuries.",
+  "objective": "Capital preservation with simplicity — stocks, gold, cash.",
+  "sleeves": [
+    {
+      "label": "equity",
+      "target_weight": 0.3333,
+      "assets": [
+        {
+          "symbol": "SPYM",
+          "name": "S&P 500",
+          "role": "broad_equity",
+          "preferred": true
+        }
+      ]
+    },
+    {
+      "label": "gold",
+      "target_weight": 0.3333,
+      "assets": [
+        {
+          "symbol": "GLDM",
+          "name": "SPDR Gold MiniShares",
+          "role": "gold",
+          "preferred": true
+        }
+      ]
+    },
+    {
+      "label": "cash",
+      "target_weight": 0.3333,
+      "assets": [
+        {
+          "symbol": "BIL",
+          "name": "SPDR Bloomberg 1-3M T-Bill",
+          "role": "cash_proxy",
+          "preferred": true
+        }
+      ]
+    }
+  ],
+  "all_assets": [
+    {
+      "symbol": "SPYM",
+      "name": "S&P 500",
+      "preferred": true,
+      "target_weight": 0.3333,
+      "role": "equity"
+    },
+    {
+      "symbol": "GLDM",
+      "name": "SPDR Gold MiniShares",
+      "preferred": true,
+      "target_weight": 0.3333,
+      "role": "gold"
+    },
+    {
+      "symbol": "BIL",
+      "name": "SPDR Bloomberg 1-3M T-Bill",
+      "preferred": true,
+      "target_weight": 0.3333,
+      "role": "cash"
+    }
+  ],
+  "constraints": {
+    "max_single_sleeve_drift": 0.05,
+    "max_single_asset_drift": 0.03,
+    "rebalance_cooldown_days": 14
+  }
+}

@@ -1,0 +1,1386 @@
+{
+  "schema_version": "asset-master-v1",
+  "assets": [
+    {
+      "symbol": "000218",
+      "name": "CP Gold ETF",
+      "type": "CN_OTC",
+      "region": "CN",
+      "tracks": "GOLD_SPOT",
+      "description": "CN gold ETF (国泰黄金ETF)",
+      "sleeve": "commodity",
+      "fee": {
+        "management": 0.005,
+        "custodian": 0.001,
+        "total": 0.006
+      },
+      "cal_source": {
+        "provider": "天天基金",
+        "url": "https://fund.eastmoney.com/000218.html"
+      },
+      "strategy_type": "TRENDING"
+    },
+    {
+      "symbol": "003376",
+      "name": "GF 7-10 Bond",
+      "type": "CN_OTC",
+      "region": "CN",
+      "tracks": "GOV_BOND_NAV",
+      "description": "广发中债7-10年",
+      "sleeve": "bond",
+      "fee": {
+        "management": 0.0015,
+        "custodian": 0.0005,
+        "total": 0.002
+      },
+      "tags": [
+        "medium_duration"
+      ],
+      "strategy_type": "BOND",
+      "cal_source": {
+        "provider": "天天基金",
+        "url": "https://www.csindex.com.cn/zh-CN/indices/index-detail/930916"
+      }
+    },
+    {
+      "symbol": "005754",
+      "name": "PingAn ST Bond",
+      "type": "CN_OTC",
+      "region": "CN",
+      "tracks": "ST_BOND_NAV",
+      "description": "平安短债债券A",
+      "sleeve": "bond",
+      "fee": {
+        "management": 0.003,
+        "custodian": 0.001,
+        "total": 0.004
+      },
+      "tags": [
+        "short_duration"
+      ],
+      "strategy_type": "BOND",
+      "cal_source": {
+        "provider": "天天基金",
+        "url": "https://fund.eastmoney.com/005754.html"
+      }
+    },
+    {
+      "symbol": "159207",
+      "name": "Smart High Div",
+      "type": "CN_ETF",
+      "region": "CN",
+      "tracks": "932305",
+      "description": "智选高股息ETF",
+      "cal_source": {
+        "url": "https://www.csindex.com.cn/#/indices/family/detail?indexCode=932305",
+        "provider": "中证指数官网 (CSI)"
+      },
+      "sleeve": "equity",
+      "fee": {
+        "management": 0.0015,
+        "custodian": 0.0005,
+        "total": 0.002
+      },
+      "strategy_type": "STEADY"
+    },
+    {
+      "symbol": "159222",
+      "name": "Free Cash Flow",
+      "type": "CN_ETF",
+      "region": "CN",
+      "tracks": "980092",
+      "description": "自由现金流ETF",
+      "cal_source": {
+        "url": "https://www.cnindex.com.cn/module/index-detail.html?act_menu=1&indexCode=980092",
+        "provider": "国证指数官网 (CNI)"
+      },
+      "sleeve": "equity",
+      "fee": {
+        "management": 0.0015,
+        "custodian": 0.0005,
+        "total": 0.002
+      },
+      "strategy_type": "STEADY"
+    },
+    {
+      "symbol": "159259",
+      "name": "Growth 100",
+      "type": "CN_ETF",
+      "region": "CN",
+      "tracks": "980080",
+      "description": "成长ETF",
+      "cal_source": {
+        "url": "https://www.cnindex.com.cn/module/index-detail.html?act_menu=1&indexCode=980080",
+        "provider": "国证指数官网 (CNI)"
+      },
+      "sleeve": "equity",
+      "fee": {
+        "management": 0.005,
+        "custodian": 0.001,
+        "total": 0.006
+      },
+      "strategy_type": "VOLATILE"
+    },
+    {
+      "symbol": "159263",
+      "name": "Value 100",
+      "type": "CN_ETF",
+      "region": "CN",
+      "tracks": "980081",
+      "description": "易方达深证100价值ETF (CNI 国证价值 980081)",
+      "cal_source": {
+        "url": "https://www.cnindex.com.cn/module/index-detail.html?act_menu=1&indexCode=980081",
+        "provider": "国证指数官网 (CNI)"
+      },
+      "sleeve": "equity",
+      "fee": {
+        "management": 0.005,
+        "custodian": 0.001,
+        "total": 0.006
+      },
+      "strategy_type": "STEADY"
+    },
+    {
+      "symbol": "159307",
+      "name": "Div Low-Vol 100",
+      "type": "CN_ETF",
+      "region": "CN",
+      "tracks": "H20955",
+      "description": "博时中证红利低波100ETF (CSI 红利低波100)",
+      "cal_source": {
+        "url": "https://www.csindex.com.cn/#/indices/family/detail?indexCode=930955",
+        "provider": "中证指数官网 (CSI)"
+      },
+      "sleeve": "equity",
+      "fee": {
+        "management": 0.0015,
+        "custodian": 0.0005,
+        "total": 0.002
+      },
+      "strategy_type": "STEADY"
+    },
+    {
+      "symbol": "159547",
+      "name": "Div Low-Vol",
+      "type": "CN_ETF",
+      "region": "CN",
+      "tracks": "H20269",
+      "description": "红利低波ETF",
+      "cal_source": {
+        "url": "https://www.csindex.com.cn/#/indices/family/detail?indexCode=H30269",
+        "provider": "中证指数官网 (CSI)"
+      },
+      "sleeve": "equity",
+      "fee": {
+        "management": 0.0015,
+        "custodian": 0.0005,
+        "total": 0.002
+      },
+      "strategy_type": "STEADY"
+    },
+    {
+      "symbol": "159589",
+      "name": "CSI Dividend",
+      "type": "CN_ETF",
+      "region": "CN",
+      "tracks": "H00922",
+      "description": "中证红利广发",
+      "cal_source": {
+        "url": "https://www.csindex.com.cn/#/indices/family/detail?indexCode=000922",
+        "provider": "中证指数官网 (CSI)"
+      },
+      "sleeve": "equity",
+      "fee": {
+        "management": 0.0015,
+        "custodian": 0.0005,
+        "total": 0.002
+      },
+      "strategy_type": "STEADY"
+    },
+    {
+      "symbol": "159611",
+      "name": "Power ETF",
+      "type": "CN_ETF",
+      "region": "CN",
+      "tracks": "H30199",
+      "description": "电力ETF广发",
+      "sleeve": "equity",
+      "fee": {
+        "management": 0.005,
+        "custodian": 0.001,
+        "total": 0.006
+      },
+      "cal_source": {
+        "provider": "中证指数官网 (CSI)",
+        "url": "https://www.csindex.com.cn/#/indices/family/detail?indexCode=H30199"
+      },
+      "strategy_type": "VOLATILE"
+    },
+    {
+      "symbol": "159945",
+      "name": "Energy ETF GF",
+      "type": "CN_ETF",
+      "region": "CN",
+      "tracks": "000986",
+      "description": "能源ETF广发",
+      "sleeve": "commodity",
+      "fee": {
+        "management": 0.005,
+        "custodian": 0.001,
+        "total": 0.006
+      },
+      "cal_source": {
+        "provider": "中证指数官网 (CSI)",
+        "url": "https://www.csindex.com.cn/#/indices/family/detail?indexCode=000986"
+      },
+      "strategy_type": "VOLATILE"
+    },
+    {
+      "symbol": "159985",
+      "name": "Bean ETF",
+      "type": "CN_ETF",
+      "region": "CN",
+      "tracks": "SOYBEAN_FUTURES",
+      "description": "豆粕ETF - 跟踪大商所豆粕期货价格指数",
+      "sleeve": "commodity",
+      "fee": {
+        "management": 0.005,
+        "custodian": 0.001,
+        "total": 0.006
+      },
+      "cal_source": {
+        "provider": "大商所",
+        "url": "https://www.dce.com.cn/"
+      },
+      "strategy_type": "TRENDING"
+    },
+    {
+      "symbol": "510170",
+      "name": "SSE Commodity Stocks",
+      "type": "CN_ETF",
+      "region": "CN",
+      "tracks": "000066",
+      "description": "商品股ETF",
+      "cal_source": {
+        "url": "https://www.csindex.com.cn/#/indices/family/detail?indexCode=000066",
+        "provider": "中证指数官网 (CSI)"
+      },
+      "sleeve": "commodity",
+      "fee": {
+        "management": 0.006,
+        "custodian": 0.001,
+        "total": 0.007
+      },
+      "strategy_type": "VOLATILE"
+    },
+    {
+      "symbol": "510310",
+      "name": "CSI 300 ETF",
+      "type": "CN_ETF",
+      "region": "CN",
+      "tracks": "000300",
+      "description": "沪深300ETF",
+      "cal_source": {
+        "url": "https://www.csindex.com.cn/zh-CN/indices/index-detail/H00300",
+        "provider": "中证指数官网 (CSI)"
+      },
+      "sleeve": "equity",
+      "fee": {
+        "management": 0.0015,
+        "custodian": 0.0005,
+        "total": 0.002
+      },
+      "strategy_type": "VOLATILE"
+    },
+    {
+      "symbol": "511100",
+      "name": "30Y Treasury Bond ETF",
+      "type": "CN_ETF",
+      "region": "CN",
+      "tracks": "931080",
+      "description": "上证30年期国债ETF",
+      "cal_source": {
+        "url": "https://www.csindex.com.cn/zh-CN/indices/index-detail/931080",
+        "provider": "中证指数官网 (CSI)"
+      },
+      "sleeve": "bond",
+      "fee": {
+        "management": 0.0015,
+        "custodian": 0.0005,
+        "total": 0.002
+      },
+      "tags": [
+        "long_duration"
+      ],
+      "strategy_type": "BOND"
+    },
+    {
+      "symbol": "511260",
+      "name": "10Y Treasury Bond ETF",
+      "type": "CN_ETF",
+      "region": "CN",
+      "tracks": "930916",
+      "description": "上证10年期国债ETF",
+      "cal_source": {
+        "url": "https://www.csindex.com.cn/zh-CN/indices/index-detail/930916",
+        "provider": "中证指数官网 (CSI)"
+      },
+      "sleeve": "bond",
+      "fee": {
+        "management": 0.0015,
+        "custodian": 0.0005,
+        "total": 0.002
+      },
+      "tags": [
+        "medium_duration"
+      ],
+      "strategy_type": "BOND"
+    },
+    {
+      "symbol": "512050",
+      "name": "A500 ETF",
+      "type": "CN_ETF",
+      "region": "CN",
+      "tracks": "000510",
+      "description": "中证A500ETF",
+      "cal_source": {
+        "url": "https://www.csindex.com.cn/zh-CN/indices/index-detail/000510CNY010",
+        "provider": "中证指数官网 (CSI)"
+      },
+      "sleeve": "equity",
+      "fee": {
+        "management": 0.0015,
+        "custodian": 0.0005,
+        "total": 0.002
+      },
+      "strategy_type": "VOLATILE"
+    },
+    {
+      "symbol": "512400",
+      "name": "Nonferrous Metals ETF",
+      "type": "CN_ETF",
+      "region": "CN",
+      "tracks": "000819",
+      "description": "有色金属ETF南方",
+      "sleeve": "commodity",
+      "fee": {
+        "management": 0.005,
+        "custodian": 0.001,
+        "total": 0.006
+      },
+      "cal_source": {
+        "provider": "中证指数官网 (CSI)",
+        "url": "https://www.csindex.com.cn/#/indices/family/detail?indexCode=000819"
+      },
+      "strategy_type": "VOLATILE"
+    },
+    {
+      "symbol": "560700",
+      "name": "SOE SH Return",
+      "type": "CN_ETF",
+      "region": "CN",
+      "tracks": "932039",
+      "description": "央企股东回报",
+      "cal_source": {
+        "url": "https://www.csindex.com.cn/#/indices/family/detail?indexCode=932039",
+        "provider": "中证指数官网 (CSI)"
+      },
+      "sleeve": "equity",
+      "fee": {
+        "management": 0.005,
+        "custodian": 0.0005,
+        "total": 0.0055
+      },
+      "strategy_type": "STEADY"
+    },
+    {
+      "symbol": "007751",
+      "name": "SHS Div Low-Vol Growth",
+      "type": "CN_OTC",
+      "region": "CN",
+      "tracks": "931157",
+      "description": "SHS红利成长LV",
+      "cal_source": {
+        "url": "https://www.csindex.com.cn/#/indices/family/detail?indexCode=931157",
+        "provider": "中证指数官网 (CSI)"
+      },
+      "sleeve": "equity",
+      "fee": {
+        "management": 0.005,
+        "custodian": 0.0015,
+        "total": 0.0065
+      },
+      "strategy_type": "STEADY",
+      "tr_index": "H21157"
+    },
+    {
+      "symbol": "012708",
+      "name": "East Sec Div Low-Vol",
+      "type": "CN_OTC",
+      "region": "CN",
+      "tracks": "931446",
+      "description": "东证红利低波",
+      "cal_source": {
+        "url": "https://www.csindex.com.cn/#/indices/family/detail?indexCode=931446",
+        "provider": "中证指数官网 (CSI)"
+      },
+      "sleeve": "equity",
+      "fee": {
+        "management": 0.005,
+        "custodian": 0.001,
+        "total": 0.006
+      },
+      "strategy_type": "STEADY",
+      "tr_index": "921446"
+    },
+    {
+      "symbol": "3032.HK",
+      "name": "HS Tech",
+      "type": "HK_ETF",
+      "region": "US",
+      "description": "恒生科技ETF",
+      "cal_source": {
+        "url": "https://finance.yahoo.com/quote/3032.HK",
+        "provider": "Yahoo"
+      },
+      "sleeve": "equity",
+      "fee": {
+        "management": 0.0055,
+        "custodian": 0.0,
+        "total": 0.0055
+      },
+      "strategy_type": "VOLATILE"
+    },
+    {
+      "symbol": "3110.HK",
+      "name": "GX HS Div",
+      "type": "HK_ETF",
+      "region": "US",
+      "description": "GX恒生股息",
+      "cal_source": {
+        "url": "https://finance.yahoo.com/quote/3110.HK",
+        "provider": "Yahoo"
+      },
+      "sleeve": "equity",
+      "fee": {
+        "management": 0.0068,
+        "custodian": 0.0,
+        "total": 0.0068
+      },
+      "strategy_type": "STEADY"
+    },
+    {
+      "symbol": "BIL",
+      "name": "SPDR Bloomberg 1-3 Month T-Bill ETF",
+      "type": "US_ETF",
+      "region": "US",
+      "description": "超短期美债现金替代ETF",
+      "cal_source": {
+        "url": "https://finance.yahoo.com/quote/BIL",
+        "provider": "Yahoo"
+      },
+      "sleeve": "cash",
+      "fee": {
+        "management": 0.0014,
+        "custodian": 0.0,
+        "total": 0.0014
+      },
+      "tags": [
+        "short_duration"
+      ],
+      "strategy_type": "BOND"
+    },
+    {
+      "symbol": "COPX",
+      "name": "Global X Copper Miners ETF",
+      "type": "US_ETF",
+      "region": "US",
+      "description": "HALO Copper - AI 基建核心铜矿主题",
+      "sleeve": "commodity",
+      "fee": {
+        "management": 0.0065,
+        "custodian": 0.0,
+        "total": 0.0065
+      },
+      "cal_source": {
+        "provider": "Yahoo",
+        "url": "https://finance.yahoo.com/quote/COPX"
+      },
+      "strategy_type": "VOLATILE"
+    },
+    {
+      "symbol": "DBC",
+      "name": "Invesco DB Commodity Index",
+      "type": "US_ETF",
+      "region": "US",
+      "description": "商品指数ETF",
+      "cal_source": {
+        "provider": "Yahoo",
+        "url": "https://finance.yahoo.com/quote/DBC"
+      },
+      "sleeve": "commodity",
+      "fee": {
+        "management": 0.0085,
+        "custodian": 0.0,
+        "total": 0.0085
+      },
+      "strategy_type": "TRENDING"
+    },
+    {
+      "symbol": "GLDM",
+      "name": "SPDR Gold MiniShares",
+      "type": "US_ETF",
+      "region": "US",
+      "description": "SPDR黄金信托",
+      "cal_source": {
+        "provider": "Yahoo",
+        "url": "https://finance.yahoo.com/quote/GLDM"
+      },
+      "sleeve": "commodity",
+      "fee": {
+        "management": 0.001,
+        "custodian": 0.0,
+        "total": 0.001
+      },
+      "strategy_type": "TRENDING"
+    },
+    {
+      "symbol": "IDU",
+      "name": "iShares U.S. Utilities ETF",
+      "type": "US_ETF",
+      "region": "US",
+      "description": "HALO Utilities - 美国公用事业篮子",
+      "sleeve": "equity",
+      "fee": {
+        "management": 0.0038,
+        "custodian": 0.0,
+        "total": 0.0038
+      },
+      "cal_source": {
+        "provider": "Yahoo",
+        "url": "https://finance.yahoo.com/quote/IDU"
+      },
+      "strategy_type": "STEADY"
+    },
+    {
+      "symbol": "IFRA",
+      "name": "iShares U.S. Infrastructure ETF",
+      "type": "US_ETF",
+      "region": "US",
+      "description": "HALO Infra - 美国基建资产组合",
+      "sleeve": "equity",
+      "fee": {
+        "management": 0.003,
+        "custodian": 0.0,
+        "total": 0.003
+      },
+      "cal_source": {
+        "provider": "Yahoo",
+        "url": "https://finance.yahoo.com/quote/IFRA"
+      },
+      "strategy_type": "STEADY"
+    },
+    {
+      "symbol": "IYT",
+      "name": "iShares Transportation Average ETF",
+      "type": "US_ETF",
+      "region": "US",
+      "description": "HALO Transport - 铁路物流与运输网络",
+      "sleeve": "equity",
+      "fee": {
+        "management": 0.0038,
+        "custodian": 0.0,
+        "total": 0.0038
+      },
+      "cal_source": {
+        "provider": "Yahoo",
+        "url": "https://finance.yahoo.com/quote/IYT"
+      },
+      "strategy_type": "VOLATILE"
+    },
+    {
+      "symbol": "MOAT",
+      "name": "VanEck Morningstar Wide Moat",
+      "type": "US_ETF",
+      "region": "US",
+      "description": "晨星护城河",
+      "cal_source": {
+        "url": "https://www.vaneck.com/us/en/investments/morningstar-wide-moat-etf-moat/performance/?redirectVE=generic",
+        "provider": "VanEck"
+      },
+      "sleeve": "equity",
+      "fee": {
+        "management": 0.0046,
+        "custodian": 0.0,
+        "total": 0.0046
+      },
+      "strategy_type": "STEADY"
+    },
+    {
+      "symbol": "PAVE",
+      "name": "Global X U.S. Infrastructure Development ETF",
+      "type": "US_ETF",
+      "region": "US",
+      "description": "HALO Infra - 基建开发受益篮子",
+      "sleeve": "equity",
+      "fee": {
+        "management": 0.0047,
+        "custodian": 0.0,
+        "total": 0.0047
+      },
+      "cal_source": {
+        "provider": "Yahoo",
+        "url": "https://finance.yahoo.com/quote/PAVE"
+      },
+      "strategy_type": "STEADY"
+    },
+    {
+      "symbol": "PKW",
+      "name": "Invesco Buyback Achievers",
+      "type": "US_ETF",
+      "region": "US",
+      "description": "Invesco股东回购",
+      "cal_source": {
+        "url": "https://finance.yahoo.com/quote/PKW",
+        "provider": "Yahoo"
+      },
+      "sleeve": "equity",
+      "fee": {
+        "management": 0.0062,
+        "custodian": 0.0,
+        "total": 0.0062
+      },
+      "strategy_type": "STEADY"
+    },
+    {
+      "symbol": "QQQM",
+      "name": "Invesco Nasdaq-100",
+      "type": "US_ETF",
+      "region": "US",
+      "description": "Invesco纳指100",
+      "cal_source": {
+        "url": "https://www.nasdaq.com/market-activity/index/ndx/historical?page=1&rows_per_page=10&timeline=y10",
+        "provider": "Nasdaq"
+      },
+      "sleeve": "equity",
+      "fee": {
+        "management": 0.0015,
+        "custodian": 0.0,
+        "total": 0.0015
+      },
+      "strategy_type": "STEADY"
+    },
+    {
+      "symbol": "SCHD",
+      "name": "Schwab US Div",
+      "type": "US_ETF",
+      "region": "US",
+      "description": "景顺红利质量",
+      "cal_source": {
+        "url": "https://www.spglobal.com/spdji/en/indices/dividends-factors/dow-jones-us-dividend-100-index/?currency=USD&returntype=T-#overview",
+        "provider": "S&P Global"
+      },
+      "sleeve": "equity",
+      "fee": {
+        "management": 0.0006,
+        "custodian": 0.0,
+        "total": 0.0006
+      },
+      "strategy_type": "STEADY"
+    },
+    {
+      "symbol": "SCHY",
+      "name": "Schwab Int Div",
+      "type": "US_ETF",
+      "region": "US",
+      "description": "景顺国际红利质量",
+      "cal_source": {
+        "url": "https://www.spglobal.com/spdji/en/indices/dividends-factors/dow-jones-international-dividend-100-index/?currency=USD&returntype=T-#overview",
+        "provider": "S&P Global"
+      },
+      "sleeve": "equity",
+      "fee": {
+        "management": 0.0008,
+        "custodian": 0.0,
+        "total": 0.0008
+      },
+      "strategy_type": "STEADY"
+    },
+    {
+      "symbol": "SPYM",
+      "name": "S&P 500",
+      "type": "US_ETF",
+      "region": "US",
+      "description": "标普500",
+      "cal_source": {
+        "url": "https://www.spglobal.com/spdji/en/indices/equity/sp-500/?currency=USD&returntype=T-#overview",
+        "provider": "S&P Global"
+      },
+      "sleeve": "equity",
+      "fee": {
+        "management": 0.0002,
+        "custodian": 0.0,
+        "total": 0.0002
+      },
+      "strategy_type": "STEADY"
+    },
+    {
+      "symbol": "TLT",
+      "name": "iShares 20+ Year Treasury Bond ETF",
+      "type": "US_ETF",
+      "region": "US",
+      "description": "20年以上美债ETF",
+      "cal_source": {
+        "url": "https://finance.yahoo.com/quote/TLT",
+        "provider": "Yahoo"
+      },
+      "sleeve": "bond",
+      "fee": {
+        "management": 0.0015,
+        "custodian": 0.0,
+        "total": 0.0015
+      },
+      "tags": [
+        "long_duration"
+      ],
+      "strategy_type": "VOLATILE"
+    },
+    {
+      "symbol": "USMV",
+      "name": "iShares MSCI USA Min Vol",
+      "type": "US_ETF",
+      "region": "US",
+      "description": "美国低波",
+      "cal_source": {
+        "url": "https://www.msci.com/indexes/index/139133",
+        "provider": "MSCI"
+      },
+      "sleeve": "equity",
+      "fee": {
+        "management": 0.0015,
+        "custodian": 0.0,
+        "total": 0.0015
+      },
+      "strategy_type": "STEADY"
+    },
+    {
+      "symbol": "USRT",
+      "name": "iShares Core U.S. REIT ETF",
+      "type": "US_ETF",
+      "region": "US",
+      "description": "HALO REIT - 核心美国 REIT 组合",
+      "sleeve": "real_estate",
+      "fee": {
+        "management": 0.0008,
+        "custodian": 0.0,
+        "total": 0.0008
+      },
+      "cal_source": {
+        "provider": "Yahoo",
+        "url": "https://finance.yahoo.com/quote/USRT"
+      },
+      "strategy_type": "STEADY"
+    },
+    {
+      "symbol": "VAW",
+      "name": "Vanguard Materials ETF",
+      "type": "US_ETF",
+      "region": "US",
+      "description": "HALO Materials - 资源与材料广覆盖",
+      "sleeve": "equity",
+      "fee": {
+        "management": 0.0009,
+        "custodian": 0.0,
+        "total": 0.0009
+      },
+      "cal_source": {
+        "provider": "Yahoo",
+        "url": "https://finance.yahoo.com/quote/VAW"
+      },
+      "strategy_type": "VOLATILE"
+    },
+    {
+      "symbol": "VDE",
+      "name": "Vanguard Energy",
+      "type": "US_ETF",
+      "region": "US",
+      "description": "中小能源企业",
+      "cal_source": {
+        "provider": "Yahoo",
+        "url": "https://finance.yahoo.com/quote/VDE"
+      },
+      "sleeve": "commodity",
+      "fee": {
+        "management": 0.0009,
+        "custodian": 0.0,
+        "total": 0.0009
+      },
+      "strategy_type": "VOLATILE"
+    },
+    {
+      "symbol": "VNQ",
+      "name": "Vanguard Real Estate ETF",
+      "type": "US_ETF",
+      "region": "US",
+      "description": "HALO REIT - 房地产与基础设施型 REITs",
+      "sleeve": "real_estate",
+      "fee": {
+        "management": 0.0013,
+        "custodian": 0.0,
+        "total": 0.0013
+      },
+      "cal_source": {
+        "provider": "Yahoo",
+        "url": "https://finance.yahoo.com/quote/VNQ"
+      },
+      "strategy_type": "STEADY"
+    },
+    {
+      "symbol": "VPU",
+      "name": "Vanguard Utilities ETF",
+      "type": "US_ETF",
+      "region": "US",
+      "description": "HALO Utilities - 稳定现金流与高分红",
+      "sleeve": "equity",
+      "fee": {
+        "management": 0.0009,
+        "custodian": 0.0,
+        "total": 0.0009
+      },
+      "cal_source": {
+        "provider": "Yahoo",
+        "url": "https://finance.yahoo.com/quote/VPU"
+      },
+      "strategy_type": "STEADY"
+    },
+    {
+      "symbol": "XLB",
+      "name": "Materials Select Sector SPDR",
+      "type": "US_ETF",
+      "region": "US",
+      "description": "HALO Materials - 基础材料与工业上游",
+      "sleeve": "equity",
+      "fee": {
+        "management": 0.0008,
+        "custodian": 0.0,
+        "total": 0.0008
+      },
+      "cal_source": {
+        "provider": "Yahoo",
+        "url": "https://finance.yahoo.com/quote/XLB"
+      },
+      "strategy_type": "VOLATILE"
+    },
+    {
+      "symbol": "XLE",
+      "name": "Energy Select Sector SPDR",
+      "type": "US_ETF",
+      "region": "US",
+      "description": "HALO Energy - 油气与能源稀缺资产",
+      "sleeve": "commodity",
+      "fee": {
+        "management": 0.0008,
+        "custodian": 0.0,
+        "total": 0.0008
+      },
+      "cal_source": {
+        "provider": "Yahoo",
+        "url": "https://finance.yahoo.com/quote/XLE"
+      },
+      "strategy_type": "VOLATILE"
+    },
+    {
+      "symbol": "XLRE",
+      "name": "Real Estate Select Sector SPDR",
+      "type": "US_ETF",
+      "region": "US",
+      "description": "HALO REIT - 房地产精选板块",
+      "sleeve": "real_estate",
+      "fee": {
+        "management": 0.0008,
+        "custodian": 0.0,
+        "total": 0.0008
+      },
+      "cal_source": {
+        "provider": "Yahoo",
+        "url": "https://finance.yahoo.com/quote/XLRE"
+      },
+      "strategy_type": "STEADY"
+    },
+    {
+      "symbol": "XLU",
+      "name": "Utilities Select Sector SPDR",
+      "type": "US_ETF",
+      "region": "US",
+      "description": "HALO Utilities - 天然垄断电网公用事业",
+      "sleeve": "equity",
+      "fee": {
+        "management": 0.0008,
+        "custodian": 0.0,
+        "total": 0.0008
+      },
+      "cal_source": {
+        "provider": "Yahoo",
+        "url": "https://finance.yahoo.com/quote/XLU"
+      },
+      "strategy_type": "STEADY"
+    },
+    {
+      "symbol": "159209",
+      "name": "Full Dividend Quality ETF",
+      "type": "CN_ETF",
+      "region": "CN",
+      "tracks": "932315",
+      "description": "全指红利质量ETF",
+      "cal_source": {
+        "provider": "中证指数官网 (CSI)",
+        "url": "https://www.csindex.com.cn/#/indices/family/detail?indexCode=932315"
+      },
+      "sleeve": "equity",
+      "fee": {
+        "management": 0.0015,
+        "custodian": 0.0005,
+        "total": 0.002
+      },
+      "strategy_type": "STEADY"
+    },
+    {
+      "symbol": "159269",
+      "name": "HK Tech ETF",
+      "type": "CN_ETF",
+      "region": "CN",
+      "tracks": "931573",
+      "description": "港股科技ETF - 跟踪中证港股通科技指数",
+      "cal_source": {
+        "provider": "中证指数官网 (CSI)",
+        "url": "https://www.csindex.com.cn/zh-CN/indices/index-detail/931573"
+      },
+      "sleeve": "equity",
+      "fee": {
+        "management": 0.003,
+        "custodian": 0.0005,
+        "total": 0.0035
+      },
+      "strategy_type": "VOLATILE"
+    },
+    {
+      "symbol": "159758",
+      "name": "Dividend Quality ETF",
+      "type": "CN_ETF",
+      "region": "CN",
+      "tracks": "931468",
+      "description": "红利质量ETF",
+      "cal_source": {
+        "provider": "中证指数官网 (CSI)",
+        "url": "https://www.csindex.com.cn/#/indices/family/detail?indexCode=931468"
+      },
+      "sleeve": "equity",
+      "fee": {
+        "management": 0.0015,
+        "custodian": 0.0005,
+        "total": 0.002
+      },
+      "strategy_type": "VOLATILE"
+    },
+    {
+      "symbol": "510500",
+      "name": "CSI 500 ETF",
+      "type": "CN_ETF",
+      "region": "CN",
+      "tracks": "000905",
+      "description": "南方中证500ETF",
+      "sleeve": "equity",
+      "strategy_type": "VOLATILE",
+      "fee": {
+        "management": 0.0015,
+        "custodian": 0.0005,
+        "total": 0.002
+      },
+      "cal_source": {
+        "provider": "中证指数官网 (CSI)",
+        "url": "https://www.csindex.com.cn/zh-CN/indices/index-detail/000905"
+      }
+    },
+    {
+      "symbol": "004827",
+      "name": "平安中短债债券A",
+      "type": "CN_OTC",
+      "region": "CN",
+      "sleeve": "bond",
+      "strategy_type": "BOND",
+      "description": "平安中短债债券型证券投资基金A类",
+      "tags": [
+        "medium_duration"
+      ],
+      "fee": {
+        "management": 0.003,
+        "custodian": 0.001,
+        "total": 0.004
+      },
+      "cal_source": {
+        "provider": "天天基金",
+        "url": "https://fund.eastmoney.com/004827.html"
+      }
+    },
+    {
+      "symbol": "159531",
+      "name": "CSI 2000 ETF",
+      "type": "CN_ETF",
+      "region": "CN",
+      "tracks": "932000",
+      "description": "南方中证2000ETF",
+      "sleeve": "equity",
+      "strategy_type": "VOLATILE",
+      "fee": {
+        "management": 0.005,
+        "custodian": 0.001,
+        "total": 0.006
+      },
+      "tags": [
+        "small_cap",
+        "deep_value"
+      ],
+      "cal_source": {
+        "provider": "中证指数官网 (CSI)",
+        "url": "https://www.csindex.com.cn/zh-CN/indices/index-detail/932000"
+      }
+    },
+    {
+      "symbol": "110017",
+      "name": "E Fund Bond A",
+      "type": "CN_OTC",
+      "region": "CN",
+      "tracks": "GOV_BOND_NAV",
+      "description": "易方达增强回报债券A",
+      "sleeve": "bond",
+      "fee": {
+        "management": 0.0065,
+        "custodian": 0.0015,
+        "total": 0.008
+      },
+      "tags": [
+        "medium_duration"
+      ],
+      "strategy_type": "BOND",
+      "cal_source": {
+        "provider": "天天基金",
+        "url": "https://fund.eastmoney.com/110017.html"
+      }
+    },
+    {
+      "symbol": "675100",
+      "name": "West Lead Bond A",
+      "type": "CN_OTC",
+      "region": "CN",
+      "tracks": "GOV_BOND_NAV",
+      "description": "西部利得得尊纯债A",
+      "sleeve": "bond",
+      "fee": {
+        "management": 0.003,
+        "custodian": 0.001,
+        "total": 0.004
+      },
+      "tags": [
+        "short_duration"
+      ],
+      "strategy_type": "BOND",
+      "cal_source": {
+        "provider": "天天基金",
+        "url": "https://fund.eastmoney.com/675100.html"
+      }
+    },
+    {
+      "symbol": "001422",
+      "name": "IGW Safe Mixed A",
+      "type": "CN_OTC",
+      "region": "CN",
+      "tracks": "GOV_BOND_NAV",
+      "description": "景顺长城安享回报混合A",
+      "sleeve": "bond",
+      "fee": {
+        "management": 0.006,
+        "custodian": 0.002,
+        "total": 0.008
+      },
+      "tags": [
+        "medium_duration"
+      ],
+      "strategy_type": "BOND",
+      "cal_source": {
+        "provider": "天天基金",
+        "url": "https://fund.eastmoney.com/001422.html"
+      }
+    },
+    {
+      "symbol": "000385",
+      "name": "IGW Jingyi Shuangli Bond A",
+      "type": "CN_OTC",
+      "region": "CN",
+      "sleeve": "bond",
+      "strategy_type": "BOND",
+      "description": "景顺长城景颐双利债券A",
+      "tags": [
+        "medium_duration"
+      ],
+      "fee": {
+        "management": 0.006,
+        "custodian": 0.002,
+        "total": 0.008
+      },
+      "cal_source": {
+        "provider": "天天基金",
+        "url": "https://fund.eastmoney.com/000385.html"
+      }
+    },
+    {
+      "symbol": "590009",
+      "name": "China Post Stable Income Bond A",
+      "type": "CN_OTC",
+      "region": "CN",
+      "sleeve": "bond",
+      "strategy_type": "BOND",
+      "description": "中邮稳定收益债券A",
+      "tags": [
+        "short_duration"
+      ],
+      "fee": {
+        "management": 0.003,
+        "custodian": 0.001,
+        "total": 0.004
+      },
+      "cal_source": {
+        "provider": "天天基金",
+        "url": "https://fund.eastmoney.com/590009.html"
+      }
+    },
+    {
+      "symbol": "IEF",
+      "name": "iShares 7-10 Year Treasury Bond ETF",
+      "type": "US_ETF",
+      "region": "US",
+      "description": "7-10年期美国国债ETF",
+      "sleeve": "bond",
+      "fee": {
+        "management": 0.0015,
+        "custodian": 0.0,
+        "total": 0.0015
+      },
+      "tags": [
+        "medium_duration"
+      ],
+      "strategy_type": "BOND",
+      "cal_source": {
+        "provider": "Yahoo",
+        "url": "https://finance.yahoo.com/quote/IEF"
+      }
+    },
+    {
+      "symbol": "STIP",
+      "name": "iShares 0-5 Year TIPS Bond ETF",
+      "type": "US_ETF",
+      "region": "US",
+      "description": "0-5年短端TIPS ETF（低费替代VTIP）",
+      "sleeve": "bond",
+      "fee": {
+        "management": 0.0003,
+        "custodian": 0.0,
+        "total": 0.0003
+      },
+      "tags": [
+        "short_duration"
+      ],
+      "strategy_type": "BOND",
+      "cal_source": {
+        "provider": "Yahoo",
+        "url": "https://finance.yahoo.com/quote/STIP"
+      }
+    },
+    {
+      "symbol": "VGIT",
+      "name": "Vanguard Intermediate-Term Treasury ETF",
+      "type": "US_ETF",
+      "region": "US",
+      "description": "3-10年中端美国国债ETF",
+      "sleeve": "bond",
+      "fee": {
+        "management": 0.0004,
+        "custodian": 0.0,
+        "total": 0.0004
+      },
+      "tags": [
+        "medium_duration"
+      ],
+      "strategy_type": "BOND",
+      "cal_source": {
+        "provider": "Yahoo",
+        "url": "https://finance.yahoo.com/quote/VGIT"
+      }
+    },
+    {
+      "symbol": "VCIT",
+      "name": "Vanguard Intermediate-Term Corporate Bond ETF",
+      "type": "US_ETF",
+      "region": "US",
+      "description": "5-10年中端投资级公司债ETF",
+      "sleeve": "bond",
+      "fee": {
+        "management": 0.0004,
+        "custodian": 0.0,
+        "total": 0.0004
+      },
+      "tags": [
+        "medium_duration"
+      ],
+      "strategy_type": "BOND",
+      "cal_source": {
+        "provider": "Yahoo",
+        "url": "https://finance.yahoo.com/quote/VCIT"
+      }
+    },
+    {
+      "symbol": "BND",
+      "name": "Vanguard Total Bond Market ETF",
+      "type": "US_ETF",
+      "region": "US",
+      "description": "全市场美国债券ETF（国债+公司债+MBS）",
+      "sleeve": "bond",
+      "fee": {
+        "management": 0.0003,
+        "custodian": 0.0,
+        "total": 0.0003
+      },
+      "tags": [
+        "medium_duration"
+      ],
+      "strategy_type": "BOND",
+      "cal_source": {
+        "provider": "Yahoo",
+        "url": "https://finance.yahoo.com/quote/BND"
+      }
+    },
+    {
+      "symbol": "XMAG",
+      "name": "Defiance Large Cap ex-Mag 7 ETF",
+      "type": "US_ETF",
+      "region": "US",
+      "description": "大型股除Mag7 ETF",
+      "cal_source": {
+        "url": "https://finance.yahoo.com/quote/XMAG",
+        "provider": "Yahoo"
+      },
+      "sleeve": "equity",
+      "strategy_type": "STEADY"
+    },
+    {
+      "symbol": "MAGS",
+      "name": "Roundhill Magnificent Seven ETF",
+      "type": "US_ETF",
+      "region": "US",
+      "description": "Mag7主题ETF",
+      "cal_source": {
+        "url": "https://finance.yahoo.com/quote/MAGS",
+        "provider": "Yahoo"
+      },
+      "sleeve": "equity",
+      "strategy_type": "TRENDING"
+    },
+    {
+      "symbol": "159952",
+      "name": "ChiNext ETF(GF)",
+      "type": "CN_ETF",
+      "region": "CN",
+      "tracks": "399006",
+      "description": "创业板ETF广发",
+      "sleeve": "equity",
+      "cal_source": {
+        "provider": "中证指数",
+        "url": "https://www.csindex.com.cn/"
+      },
+      "strategy_type": "VOLATILE"
+    },
+    {
+      "symbol": "XLV",
+      "name": "Health Care Select Sector SPDR",
+      "type": "US_ETF",
+      "region": "US",
+      "description": "医疗健康板块ETF",
+      "sleeve": "equity",
+      "strategy_type": "STEADY",
+      "tags": [
+        "sector"
+      ]
+    },
+    {
+      "symbol": "159309",
+      "name": "Oil & Gas ETF",
+      "type": "CN_ETF",
+      "region": "CN",
+      "description": "油气ETF汇添富",
+      "sleeve": "commodity",
+      "strategy_type": "VOLATILE",
+      "tags": [
+        "energy",
+        "sector"
+      ],
+      "cal_source": {
+        "provider": "中证指数官网 (CSI)",
+        "url": "https://www.csindex.com.cn/zh-CN/indices/index-detail/931248"
+      },
+      "tracks": "931248"
+    },
+    {
+      "symbol": "159129",
+      "name": "华夏细分化工产业ETF",
+      "type": "CN_ETF",
+      "region": "CN",
+      "tracks": "000813",
+      "description": "华夏中证细分化工产业主题ETF",
+      "sleeve": "equity",
+      "fee": {
+        "management": 0.005,
+        "custodian": 0.001,
+        "total": 0.006
+      },
+      "cal_source": {
+        "provider": "中证指数官网 (CSI)",
+        "url": "https://www.csindex.com.cn/zh/indices/index-detail/H00813"
+      },
+      "strategy_type": "VOLATILE"
+    },
+    {
+      "symbol": "159032",
+      "name": "Ind Non-Ferrous Metals ETF",
+      "type": "CN_ETF",
+      "region": "CN",
+      "tracks": "H11059",
+      "description": "工业有色金属主题ETF - 跟踪中证工业有色金属主题指数",
+      "cal_source": {
+        "url": "https://www.csindex.com.cn/zh-CN/indices/index-detail/H11059",
+        "provider": "中证指数官网 (CSI)"
+      },
+      "sleeve": "commodity",
+      "strategy_type": "VOLATILE",
+      "tr_index": "H01059"
+    },
+    {
+      "symbol": "516080",
+      "name": "Innovative Drug ETF",
+      "type": "CN_ETF",
+      "region": "CN",
+      "tracks": "931152",
+      "description": "创新药ETF - 跟踪中证创新药产业指数(931152)",
+      "cal_source": {
+        "provider": "中证指数官网 (CSI)",
+        "url": "https://www.csindex.com.cn/zh-CN/indices/index-detail/931152"
+      },
+      "sleeve": "equity",
+      "fee": {
+        "management": 0.005,
+        "custodian": 0.001,
+        "total": 0.006
+      },
+      "strategy_type": "VOLATILE",
+      "tr_index": "931152"
+    }
+  ]
+}

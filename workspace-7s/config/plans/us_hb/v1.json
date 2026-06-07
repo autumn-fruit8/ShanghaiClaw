@@ -1,0 +1,95 @@
+{
+  "plan_id": "us_hb",
+  "version": 1,
+  "created": "2026-05-01",
+  "region": "US",
+  "currency": "USD",
+  "target_total_market_value": 25000,
+  "description": "Harry Browne permanent portfolio: stocks, long Treasuries, gold, T-bills.",
+  "objective": "Capital preservation across all economic environments.",
+  "sleeves": [
+    {
+      "label": "equity",
+      "target_weight": 0.25,
+      "assets": [
+        {
+          "symbol": "SPYM",
+          "name": "S&P 500",
+          "role": "broad_equity",
+          "preferred": true
+        }
+      ]
+    },
+    {
+      "label": "bonds",
+      "target_weight": 0.25,
+      "assets": [
+        {
+          "symbol": "TLT",
+          "name": "iShares 20+ Year Treasury",
+          "role": "long_treasury",
+          "preferred": true
+        }
+      ]
+    },
+    {
+      "label": "gold",
+      "target_weight": 0.25,
+      "assets": [
+        {
+          "symbol": "GLDM",
+          "name": "SPDR Gold MiniShares",
+          "role": "gold",
+          "preferred": true
+        }
+      ]
+    },
+    {
+      "label": "cash",
+      "target_weight": 0.25,
+      "assets": [
+        {
+          "symbol": "BIL",
+          "name": "SPDR Bloomberg 1-3M T-Bill",
+          "role": "cash_proxy",
+          "preferred": true
+        }
+      ]
+    }
+  ],
+  "all_assets": [
+    {
+      "symbol": "SPYM",
+      "name": "S&P 500",
+      "preferred": true,
+      "target_weight": 0.25,
+      "role": "equity"
+    },
+    {
+      "symbol": "TLT",
+      "name": "iShares 20+ Year Treasury",
+      "preferred": true,
+      "target_weight": 0.25,
+      "role": "bonds"
+    },
+    {
+      "symbol": "GLDM",
+      "name": "SPDR Gold MiniShares",
+      "preferred": true,
+      "target_weight": 0.25,
+      "role": "gold"
+    },
+    {
+      "symbol": "BIL",
+      "name": "SPDR Bloomberg 1-3M T-Bill",
+      "preferred": true,
+      "target_weight": 0.25,
+      "role": "cash"
+    }
+  ],
+  "constraints": {
+    "max_single_sleeve_drift": 0.05,
+    "max_single_asset_drift": 0.03,
+    "rebalance_cooldown_days": 14
+  }
+}

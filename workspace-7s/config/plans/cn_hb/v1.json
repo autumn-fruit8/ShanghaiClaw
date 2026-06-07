@@ -1,0 +1,94 @@
+{
+  "plan_id": "cn_hb",
+  "version": 1,
+  "created": "2026-05-01",
+  "region": "CN",
+  "currency": "CNY",
+  "target_total_market_value": 500000,
+  "description": "Harry Browne permanent portfolio adapted for CN — value equity, long bond, gold, short-term bond as cash proxy.",
+  "objective": "Capital preservation with moderate real return across economic cycles.",
+  "sleeves": [
+    {
+      "label": "equity",
+      "target_weight": 0.25,
+      "assets": [
+        {
+          "symbol": "159263",
+          "name": "Value 100",
+          "role": "value_factor",
+          "preferred": true
+        }
+      ]
+    },
+    {
+      "label": "bonds",
+      "target_weight": 0.25,
+      "assets": [
+        {
+          "symbol": "003376",
+          "name": "GF 7-10 Bond",
+          "role": "rate_basket",
+          "preferred": true
+        }
+      ]
+    },
+    {
+      "label": "gold",
+      "target_weight": 0.25,
+      "assets": [
+        {
+          "symbol": "000218",
+          "name": "CP Gold ETF",
+          "role": "inflation_hedge",
+          "preferred": true
+        }
+      ]
+    },
+    {
+      "label": "cash",
+      "target_weight": 0.25,
+      "assets": [
+        {
+          "symbol": "005754",
+          "name": "PingAn ST Bond",
+          "role": "cash_proxy",
+          "preferred": true
+        }
+      ]
+    }
+  ],
+  "all_assets": [
+    {
+      "symbol": "003376",
+      "name": "GF 7-10 Bond",
+      "preferred": true,
+      "target_weight": 0.25,
+      "role": "bonds"
+    },
+    {
+      "symbol": "000218",
+      "name": "CP Gold ETF",
+      "preferred": true,
+      "target_weight": 0.25,
+      "role": "gold"
+    },
+    {
+      "symbol": "005754",
+      "name": "PingAn ST Bond",
+      "preferred": true,
+      "target_weight": 0.25,
+      "role": "cash"
+    },
+    {
+      "symbol": "012708",
+      "name": "East Sec Div Low-Vol",
+      "target_weight": 0.25,
+      "note": "替代159263"
+    }
+  ],
+  "constraints": {
+    "max_single_sleeve_drift": 0.05,
+    "max_single_asset_drift": 0.03,
+    "rebalance_cooldown_days": 14
+  }
+}

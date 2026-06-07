@@ -1,0 +1,21 @@
+{
+  "enabled_regions": ["CN", "US"],
+  "region_settings": {
+    "CN": {
+      "enabled": true,
+      "priority": 1,
+      "update_window": "09:00-15:00",
+      "timezone": "Asia/Shanghai",
+      "fallback_on_api_fail": true
+    },
+    "US": {
+      "enabled": true,
+      "priority": 2,
+      "update_window": "09:30-16:00",
+      "timezone": "America/New_York",
+      "fallback_on_api_fail": true
+    }
+  },
+  "deployment_mode": "dual-region",
+  "comment": "Set enabled_regions to ['CN'], ['US'], or ['CN', 'US']. Each region's settings can be independently controlled."
+}

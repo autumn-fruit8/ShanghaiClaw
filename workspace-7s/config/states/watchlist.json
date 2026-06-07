@@ -1,0 +1,54 @@
+{
+  "schema_version": "state-db-v1",
+  "state": "watchlist",
+  "assets": [
+    {
+      "symbol": "159611",
+      "sleeve": "equity"
+    },
+    {
+      "symbol": "159985",
+      "sleeve": "commodity"
+    },
+    {
+      "symbol": "511100",
+      "sleeve": "bond"
+    },
+    {
+      "symbol": "511260",
+      "sleeve": "bond"
+    },
+    {
+      "symbol": "159589",
+      "sleeve": "equity"
+    },
+    {
+      "symbol": "560700",
+      "sleeve": "equity"
+    },
+    {
+      "symbol": "159269",
+      "sleeve": "equity"
+    },
+    {
+      "symbol": "159758",
+      "sleeve": "equity"
+    },
+    {
+      "symbol": "510500",
+      "sleeve": "equity"
+    },
+    {
+      "symbol": "159531",
+      "sleeve": "equity"
+    },
+    {
+      "symbol": "510170",
+      "sleeve": ""
+    },
+    {
+      "symbol": "512400",
+      "sleeve": ""
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "region": "CN",
+  "currency": "CNY",
+  "name": "cn_hb",
+  "target_market_value": 500000,
+  "constraints": {
+    "drift_threshold": 0.05,
+    "max_weight": 0.4,
+    "min_weight": 0.01
+  },
+  "created": "2026-05-01",
+  "all_assets": [
+    {
+      "symbol": "012708",
+      "name": "East Sec Div Low-Vol",
+      "target_weight": 0.35,
+      "role": "equity",
+      "preferred": false,
+      "risk_volatility": null
+    },
+    {
+      "symbol": "003376",
+      "name": "GF 7-10 Bond",
+      "target_weight": 0.35,
+      "role": "bonds",
+      "preferred": false,
+      "risk_volatility": null
+    },
+    {
+      "symbol": "005754",
+      "name": "PingAn ST Bond",
+      "target_weight": 0.2,
+      "role": "cash",
+      "preferred": false,
+      "risk_volatility": null
+    },
+    {
+      "symbol": "000218",
+      "name": "CP Gold ETF",
+      "target_weight": 0.1,
+      "role": "gold",
+      "preferred": false,
+      "risk_volatility": null
+    }
+  ]
+}

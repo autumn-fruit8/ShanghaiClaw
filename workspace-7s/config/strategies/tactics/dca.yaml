@@ -1,0 +1,57 @@
+name: dca
+description: DCA accumulation with gradual buy/sell rules. Default STEADY strategy.
+# fraction semantics:
+#   BUY:  fraction of available cash (0~1, e.g. 0.01 = 1% of cash)
+#   SELL: fraction of current position (0~1, e.g. 0.5 = sell half)
+# default: action when no rule matches (HOLD = stay invested, CLOSE = move to cash)
+default: { verb: HOLD }
+rules:
+  - id: bubble_exit
+    label: Bubble Exit
+    when:
+      - ldev: { gt: 3.0 }
+    do: { verb: SELL, fraction: 0.5 }
+    signal: BUBBLE_EXIT
+
+  - id: bond_yield_guard
+    label: Yield Guard
+    when:
+      - yield_pctile: { lt: 25 }
+      - ldev: { gte: -2.0 }
+    do: { verb: HOLD, fraction: 0.0 }
+    signal: YIELD_GUARD
+
+  - id: trend_accum
+    label: Trend Accum
+    when:
+      - ldev: { lt: 0.5 }
+      - price_above_ma_60: { eq: true }
+    do: { verb: BUY, fraction: 0.005 }
+    signal: TREND_ACCUM
+    cooldown: 5
+
+  - id: deep_value
+    label: Deep Value
+    when:
+      - ldev: { lt: -1.5 }
+    do: { verb: BUY, fraction: 0.02 }
+    signal: DEEP_VALUE_ACCUM
+    cooldown: 5
+
+  - id: dip_buy
+    label: Dip Buy
+    when:
+      - ldev: { gte: -1.5 }
+      - ldev: { lt: 1.0 }
+      - price_above_ma_60: { eq: false }
+    do: { verb: BUY, fraction: 0.01 }
+    signal: DIP_BUY
+    cooldown: 5
+
+  - id: rsi_oversold
+    label: RSI Oversold
+    when:
+      - ldev: { lt: 1.0 }
+      - rsi: { lt: 35 }
+    do: { verb: BUY, fraction: 0.01 }
+    signal: RSI_OVERSOLD

@@ -1,0 +1,43 @@
+fallback:
+  profile: 7s-base
+  tactic: dca
+params:
+  initial_cash: 100000.0
+species_defaults:
+  BOND:
+    profile: 7s-base
+    tactic: dca
+  STEADY:
+    profile: 7s-base
+    tactic: dca
+  TRENDING:
+    profile: momentum
+    tactic: follow
+  VOLATILE:
+    profile: 7s-base
+    tactic: deep-value
+symbols:
+- profile: momentum
+  symbol: '159259'
+  tactic: trend
+- profile: momentum
+  symbol: '159269'
+  tactic: trend
+- profile: 7s-base
+  symbol: TLT
+  tactic: deep-value
+- profile: momentum
+  symbol: '159952'
+  tactic: volume
+- profile: 7s-base
+  symbol: '510170'
+  tactic: deep-value
+- profile: 7s-base
+  symbol: '512400'
+  tactic: deep-value
+- profile: 7s-base
+  symbol: '159207'
+  tactic: deep-value
+- profile: 7s-base
+  symbol: '159222'
+  tactic: deep-value

@@ -1,0 +1,95 @@
+{
+  "plan_id": "us_bond",
+  "version": 1,
+  "created": "2026-05-25",
+  "region": "US",
+  "currency": "USD",
+  "target_total_market_value": 25000,
+  "description": "US bond sleeve — short TIPS, intermediate Treasury, corporate credit, total bond market",
+  "objective": "Diversified USD bond exposure: inflation protection + core duration + credit spread pickup + broad coverage",
+  "sleeves": [
+    {
+      "label": "short_duration",
+      "target_weight": 0.3,
+      "assets": [
+        {
+          "symbol": "STIP",
+          "name": "iShares 0-5Y TIPS",
+          "role": "inflation_protection",
+          "preferred": true
+        }
+      ]
+    },
+    {
+      "label": "medium_duration_treasury",
+      "target_weight": 0.35,
+      "assets": [
+        {
+          "symbol": "VGIT",
+          "name": "Vanguard Interm Treasury",
+          "role": "core_duration",
+          "preferred": true
+        }
+      ]
+    },
+    {
+      "label": "credit",
+      "target_weight": 0.2,
+      "assets": [
+        {
+          "symbol": "VCIT",
+          "name": "Vanguard Interm Corp",
+          "role": "credit_spread",
+          "preferred": true
+        }
+      ]
+    },
+    {
+      "label": "broad",
+      "target_weight": 0.15,
+      "assets": [
+        {
+          "symbol": "BND",
+          "name": "Vanguard Total Bond",
+          "role": "broad_coverage",
+          "preferred": true
+        }
+      ]
+    }
+  ],
+  "all_assets": [
+    {
+      "symbol": "STIP",
+      "name": "iShares 0-5Y TIPS",
+      "target_weight": 0.3,
+      "role": "short_duration",
+      "preferred": true
+    },
+    {
+      "symbol": "VGIT",
+      "name": "Vanguard Interm Treasury",
+      "target_weight": 0.35,
+      "role": "medium_duration_treasury",
+      "preferred": true
+    },
+    {
+      "symbol": "VCIT",
+      "name": "Vanguard Interm Corp",
+      "target_weight": 0.2,
+      "role": "credit",
+      "preferred": true
+    },
+    {
+      "symbol": "BND",
+      "name": "Vanguard Total Bond",
+      "target_weight": 0.15,
+      "role": "broad",
+      "preferred": true
+    }
+  ],
+  "constraints": {
+    "max_single_sleeve_drift": 0.05,
+    "max_single_asset_drift": 0.03,
+    "rebalance_cooldown_days": 30
+  }
+}

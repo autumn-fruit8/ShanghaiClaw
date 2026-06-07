@@ -1,0 +1,90 @@
+{
+  "schema_version": "state-db-v1",
+  "state": "void",
+  "assets": [
+    {
+      "symbol": "PAVE",
+      "sleeve": "equity"
+    },
+    {
+      "symbol": "XLB",
+      "sleeve": "equity"
+    },
+    {
+      "symbol": "IFRA",
+      "sleeve": "equity"
+    },
+    {
+      "symbol": "XLRE",
+      "sleeve": "other"
+    },
+    {
+      "symbol": "XMAG",
+      "sleeve": "equity"
+    },
+    {
+      "symbol": "MAGS",
+      "sleeve": "equity"
+    },
+    {
+      "symbol": "159129",
+      "sleeve": "equity"
+    },
+    {
+      "symbol": "000385",
+      "sleeve": ""
+    },
+    {
+      "symbol": "001422",
+      "sleeve": ""
+    },
+    {
+      "symbol": "004827",
+      "sleeve": ""
+    },
+    {
+      "symbol": "007751",
+      "sleeve": ""
+    },
+    {
+      "symbol": "110017",
+      "sleeve": ""
+    },
+    {
+      "symbol": "3032.HK",
+      "sleeve": ""
+    },
+    {
+      "symbol": "3110.HK",
+      "sleeve": ""
+    },
+    {
+      "symbol": "590009",
+      "sleeve": ""
+    },
+    {
+      "symbol": "675100",
+      "sleeve": ""
+    },
+    {
+      "symbol": "BND",
+      "sleeve": ""
+    },
+    {
+      "symbol": "IEF",
+      "sleeve": ""
+    },
+    {
+      "symbol": "STIP",
+      "sleeve": ""
+    },
+    {
+      "symbol": "VCIT",
+      "sleeve": ""
+    },
+    {
+      "symbol": "VGIT",
+      "sleeve": ""
+    }
+  ]
+}

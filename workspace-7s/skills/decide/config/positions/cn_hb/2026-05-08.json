@@ -1,0 +1,53 @@
+{
+  "plan_id": "cn_hb",
+  "plan_version": 1,
+  "snapshot_date": "2026-05-02",
+  "currency": "CNY",
+  "total_market_value": 204213.7,
+  "positions": [
+    {
+      "symbol": "159263",
+      "name": "Value 100",
+      "sleeve": "equity",
+      "shares": 39600.0,
+      "current_price": 1.177,
+      "market_value": 46609.200000000004,
+      "plan_weight": 0.25,
+      "actual_weight": 0.2325,
+      "drift": 0.0175
+    },
+    {
+      "symbol": "003376",
+      "name": "GF 7-10 Bond",
+      "sleeve": "bonds",
+      "shares": 25000.0,
+      "current_price": 1.4808,
+      "market_value": 37020.0,
+      "plan_weight": 0.25,
+      "actual_weight": 0.1668,
+      "drift": 0.0832
+    },
+    {
+      "symbol": "000218",
+      "name": "CP Gold ETF",
+      "sleeve": "gold",
+      "shares": 24000.0,
+      "current_price": 3.7572,
+      "market_value": 90172.8,
+      "plan_weight": 0.25,
+      "actual_weight": 0.4308,
+      "drift": -0.1808
+    },
+    {
+      "symbol": "005754",
+      "name": "PingAn ST Bond",
+      "sleeve": "cash",
+      "shares": 25000.0,
+      "current_price": 1.2734,
+      "market_value": 31835.000000000004,
+      "plan_weight": 0.25,
+      "actual_weight": 0.1535,
+      "drift": 0.0965
+    }
+  ]
+}

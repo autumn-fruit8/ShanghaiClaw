@@ -1,0 +1,154 @@
+{
+  "plan_id": "cn_anti_lost_30",
+  "version": 1,
+  "created": "2026-05-01",
+  "region": "CN",
+  "currency": "CNY",
+  "target_total_market_value": 500000,
+  "description": "Anti-deflation basket targeting Japan-scenario resilience: dividend, low-vol, quality, SOE equities.",
+  "objective": "Resilience in prolonged low-growth / deflationary regime.",
+  "allocation_method": "risk-parity",
+  "sleeves": [
+    {
+      "label": "equity",
+      "target_weight": 1.0,
+      "assets": [
+        {
+          "symbol": "159307",
+          "name": "Div Low-Vol 100",
+          "role": "low_vol",
+          "preferred": true,
+          "target_weight": 0.155437,
+          "risk_volatility": 0.147825
+        },
+        {
+          "symbol": "159547",
+          "name": "Div Low-Vol",
+          "role": "low_vol",
+          "preferred": true,
+          "target_weight": 0.14038,
+          "risk_volatility": 0.163681
+        },
+        {
+          "symbol": "159207",
+          "name": "Smart High Div",
+          "role": "high_dividend",
+          "preferred": true,
+          "target_weight": 0.14243,
+          "risk_volatility": 0.161325
+        },
+        {
+          "symbol": "159222",
+          "name": "Free Cash Flow",
+          "role": "quality",
+          "preferred": true,
+          "target_weight": 0.109919,
+          "risk_volatility": 0.209041
+        },
+        {
+          "symbol": "159259",
+          "name": "Growth 100",
+          "role": "growth",
+          "preferred": true,
+          "target_weight": 0.075266,
+          "risk_volatility": 0.305282
+        },
+        {
+          "symbol": "159263",
+          "name": "Value 100",
+          "role": "value",
+          "preferred": true,
+          "target_weight": 0.122394,
+          "risk_volatility": 0.187733
+        },
+        {
+          "symbol": "510310",
+          "name": "CSI 300 ETF",
+          "role": "index",
+          "preferred": true,
+          "target_weight": 0.129992,
+          "risk_volatility": 0.176761
+        },
+        {
+          "symbol": "512050",
+          "name": "A500 ETF",
+          "role": "index",
+          "preferred": true,
+          "target_weight": 0.124182,
+          "risk_volatility": 0.18503
+        }
+      ]
+    }
+  ],
+  "all_assets": [
+    {
+      "symbol": "159307",
+      "name": "Div Low-Vol 100",
+      "preferred": true,
+      "target_weight": 0.155437,
+      "risk_volatility": 0.147825,
+      "role": "equity"
+    },
+    {
+      "symbol": "159547",
+      "name": "Div Low-Vol",
+      "preferred": true,
+      "target_weight": 0.14038,
+      "risk_volatility": 0.163681,
+      "role": "equity"
+    },
+    {
+      "symbol": "159207",
+      "name": "Smart High Div",
+      "preferred": true,
+      "target_weight": 0.14243,
+      "risk_volatility": 0.161325,
+      "role": "equity"
+    },
+    {
+      "symbol": "159222",
+      "name": "Free Cash Flow",
+      "preferred": true,
+      "target_weight": 0.109919,
+      "risk_volatility": 0.209041,
+      "role": "equity"
+    },
+    {
+      "symbol": "159259",
+      "name": "Growth 100",
+      "preferred": true,
+      "target_weight": 0.075266,
+      "risk_volatility": 0.305282,
+      "role": "equity"
+    },
+    {
+      "symbol": "159263",
+      "name": "Value 100",
+      "preferred": true,
+      "target_weight": 0.122394,
+      "risk_volatility": 0.187733,
+      "role": "equity"
+    },
+    {
+      "symbol": "510310",
+      "name": "CSI 300 ETF",
+      "preferred": true,
+      "target_weight": 0.129992,
+      "risk_volatility": 0.176761,
+      "role": "equity"
+    },
+    {
+      "symbol": "512050",
+      "name": "A500 ETF",
+      "preferred": true,
+      "target_weight": 0.124182,
+      "risk_volatility": 0.18503,
+      "role": "equity"
+    }
+  ],
+  "constraints": {
+    "max_single_sleeve_drift": 0.05,
+    "max_single_asset_drift": 0.03,
+    "rebalance_cooldown_days": 14
+  }
+}

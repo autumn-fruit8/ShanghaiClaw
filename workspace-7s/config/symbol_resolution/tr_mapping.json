@@ -1,0 +1,72 @@
+{
+  "000300": {
+    "name": "CSI 300 ETF",
+    "tr_code": "H00300",
+    "etf_code": "510310"
+  },
+  "000510": {
+    "name": "A500 ETF",
+    "tr_code": "000510CNY010",
+    "etf_code": "512050"
+  },
+  "931468": {
+    "name": "CSI Dividend Quality",
+    "tr_code": "921468"
+  },
+  "932315": {
+    "name": "CSI All-Share Dividend Quality",
+    "tr_code": "932315CNY010"
+  },
+  "931080": {
+    "tr_code": "931080",
+    "name": "30Y Treasury Bond TR"
+  },
+  "930916": {
+    "tr_code": "930916",
+    "name": "10Y Treasury Bond TR"
+  },
+  "000905": {
+    "name": "CSI 500 ETF",
+    "tr_code": "H00905",
+    "etf_code": "510500"
+  },
+  "932000": {
+    "name": "CSI 2000 TR",
+    "tr_code": "932000CNY010",
+    "etf_code": "159531"
+  },
+  "931446": {
+    "name": "东证红利低波",
+    "tr_code": "921446",
+    "etf_code": "012708"
+  },
+  "931157": {
+    "name": "SHS红利成长LV",
+    "tr_code": "H21157",
+    "etf_code": "007751"
+  },
+  "000986": {
+    "name": "中证全指能源全收益指数",
+    "tr_code": "H00986",
+    "etf_code": "159945"
+  },
+  "000066": {
+    "name": "上证大宗商品股票全收益指数",
+    "tr_code": "H00066",
+    "etf_code": "510170"
+  },
+  "000819": {
+    "name": "中证申万有色金属全收益指数",
+    "tr_code": "H00819",
+    "etf_code": "512400"
+  },
+  "931248": {
+    "name": "CSI Oil & Gas Resources",
+    "tr_code": "931248"
+  },
+  "000813": {
+    "name": "中证细分化工产业主题全收益指数",
+    "tr_code": "H00813",
+    "etf_code": "159129"
+  }
+}

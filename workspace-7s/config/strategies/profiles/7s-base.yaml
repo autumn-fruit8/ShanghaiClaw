@@ -1,0 +1,11 @@
+name: 7s-base
+description: 标准7S信号集：趋势偏离、RSI、Z-Score、均线位置
+indicators:
+  ldev:
+    window: 252
+    secondary_window: 126
+  rsi:
+    window: 14
+  zscore:
+    window: 252
+  price_above_ma: [60]

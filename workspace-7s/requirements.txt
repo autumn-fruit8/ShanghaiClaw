@@ -1,0 +1,26 @@
+# Jarvis server-side Python dependencies
+# Installed automatically by deploy_jarvis.sh (A4 step) on every code deploy.
+
+# Data fetching
+akshare>=1.16.0          # CN market data (ETF prices, OTC fund NAV)
+yfinance>=0.2.0          # US/HK market data
+finnhub-python>=2.4.0    # US/HK market data (yfinance fallback when rate-limited)
+tiingo>=0.14.0           # US ETF holdings (requires paid plan for ETF endpoint)
+
+# File parsing (calibration + daily update)
+openpyxl>=3.1.0          # .xlsx support
+xlrd>=2.0.0              # .xls support
+lxml>=5.0.0              # HTML/MHTML parsing (Yahoo Finance exports)
+
+# Data processing
+numpy>=1.26.0
+pandas>=2.0.0
+scipy>=1.12.0            # OLS / linregress (strategy engine)
+matplotlib>=3.8.0        # Market map PNG generation
+PyYAML>=6.0.0            # Engine and config YAML loading
+
+# PDF generation
+reportlab>=4.0.0         # PDF report generation
+
+# Testing
+pytest-asyncio>=0.23.0   # Async test support

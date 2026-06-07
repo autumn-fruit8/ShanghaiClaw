@@ -1,0 +1,97 @@
+{
+  "plan_id": "cn_anti_lost_30",
+  "plan_version": 1,
+  "snapshot_date": "2026-05-01",
+  "currency": "CNY",
+  "total_market_value": 264397.62,
+  "positions": [
+    {
+      "symbol": "159207",
+      "name": "Smart High Div",
+      "sleeve": "equity",
+      "shares": 46000.0,
+      "current_price": 1.204,
+      "market_value": 55384.0,
+      "plan_weight": 0.125,
+      "actual_weight": 0.1089,
+      "drift": 0.0161
+    },
+    {
+      "symbol": "159222",
+      "name": "Free Cash Flow",
+      "sleeve": "equity",
+      "shares": 39600.0,
+      "current_price": 1.398,
+      "market_value": 55360.799999999996,
+      "plan_weight": 0.125,
+      "actual_weight": 0.1099,
+      "drift": 0.0151
+    },
+    {
+      "symbol": "159307",
+      "name": "Div Low-Vol 100",
+      "sleeve": "equity",
+      "shares": 32400.0,
+      "current_price": 1.066,
+      "market_value": 34538.4,
+      "plan_weight": 0.125,
+      "actual_weight": 0.0693,
+      "drift": 0.0557
+    },
+    {
+      "symbol": "159547",
+      "name": "Div Low-Vol",
+      "sleeve": "equity",
+      "shares": 41700.0,
+      "current_price": 1.212,
+      "market_value": 50540.4,
+      "plan_weight": 0.125,
+      "actual_weight": 0.1033,
+      "drift": 0.0217
+    },
+    {
+      "symbol": "159589",
+      "name": "CSI Dividend",
+      "sleeve": "equity",
+      "shares": 0.0,
+      "current_price": 1.119,
+      "market_value": 0.0,
+      "plan_weight": 0.125,
+      "actual_weight": 0.0,
+      "drift": -0.125
+    },
+    {
+      "symbol": "560700",
+      "name": "SOE SH Return",
+      "sleeve": "equity",
+      "shares": 12500.0,
+      "current_price": 1.21,
+      "market_value": 15125.0,
+      "plan_weight": 0.125,
+      "actual_weight": 0.03,
+      "drift": 0.095
+    },
+    {
+      "symbol": "007751",
+      "name": "SHS Div Low-Vol Growth",
+      "sleeve": "equity",
+      "shares": 11372.0,
+      "current_price": 1.6573,
+      "market_value": 18846.8156,
+      "plan_weight": 0.125,
+      "actual_weight": 0.0289,
+      "drift": 0.0961
+    },
+    {
+      "symbol": "012708",
+      "name": "East Sec Div Low-Vol",
+      "sleeve": "equity",
+      "shares": 28355.0,
+      "current_price": 1.4506,
+      "market_value": 41131.763,
+      "plan_weight": 0.125,
+      "actual_weight": 0.0784,
+      "drift": 0.0466
+    }
+  ]
+}

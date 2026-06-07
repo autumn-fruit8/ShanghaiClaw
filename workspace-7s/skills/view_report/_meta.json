@@ -1,0 +1,19 @@
+{
+  "skill_id": "view-report",
+  "version": "1.0.0",
+  "description": "Pure view layer: reads strategy snapshot/backtest logs and produces daily briefing or weekly review. Never re-computes signals.",
+  "implements": "docs/requirements/7s/data_report_spec.md",
+  "entry_point": "scripts/report_pusher.py",
+  "regions": ["cn", "us", "all"],
+  "cli": {
+    "args": ["--region cn|us|all", "--type daily|weekly", "--date YYYY-MM-DD", "--dry-run", "--skip-map"]
+  },
+  "inputs": {
+    "snapshot": "logs/positions/{YYYY-MM-DD}_{region}.json",
+    "backtest": "logs/backtest/{YYYY-MM-DD}_{region}.json"
+  },
+  "outputs": {
+    "markdown_report": "logs/reports/{YYYY-MM-DD}_{type}_report_{region}.md",
+    "market_map": "logs/reports/{YYYY-MM-DD}_market_map_{region}.png"
+  }
+}

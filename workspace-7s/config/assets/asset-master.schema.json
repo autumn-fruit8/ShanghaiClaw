@@ -1,0 +1,131 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "workspace-7s/config/asset-master.schema.json",
+  "title": "7S Asset Master Registry",
+  "description": "Canonical tradeable asset catalog. State membership is stored separately in state files.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "assets"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "asset-master-v1"
+    },
+    "assets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "symbol",
+          "name",
+          "type",
+          "region",
+          "description"
+        ],
+        "properties": {
+          "symbol": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "CN_ETF",
+              "CN_OTC",
+              "HK_ETF",
+              "US_ETF"
+            ]
+          },
+          "region": {
+            "type": "string",
+            "enum": [
+              "CN",
+              "US"
+            ]
+          },
+          "tracks": {
+            "type": "string",
+            "description": "CSI index code this asset tracks (CN equity only). Commodity/bond use exempt keywords. US/HK assets don't need this."
+          },
+          "description": {
+            "type": "string"
+          },
+          "strategy_type": {
+            "type": "string",
+            "enum": [
+              "STEADY",
+              "VOLATILE",
+              "MOMENTUM",
+              "BOND"
+            ]
+          },
+          "sleeve": {
+            "type": "string",
+            "enum": [
+              "equity",
+              "bond",
+              "commodity",
+              "real_estate",
+              "cash"
+            ]
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "cal_source": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "provider",
+              "url"
+            ],
+            "properties": {
+              "provider": {
+                "type": "string",
+                "description": "Data provider name (e.g. 中证指数, yfinance, S&P Global)"
+              },
+              "url": {
+                "type": "string",
+                "description": "Link to the underlying index page or data source"
+              }
+            }
+          },
+          "fee": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "management",
+              "custodian",
+              "total"
+            ],
+            "properties": {
+              "management": {
+                "type": "number",
+                "description": "Annual management fee rate"
+              },
+              "custodian": {
+                "type": "number",
+                "description": "Annual custodian fee rate"
+              },
+              "total": {
+                "type": "number",
+                "description": "Total expense ratio (management + custodian)"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

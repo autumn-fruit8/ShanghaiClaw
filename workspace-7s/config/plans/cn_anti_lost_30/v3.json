@@ -1,0 +1,78 @@
+{
+  "region": "CN",
+  "currency": "CNY",
+  "name": "cn_anti_lost_30",
+  "target_market_value": 500000,
+  "constraints": {
+    "drift_threshold": 0.05,
+    "max_weight": 1.0,
+    "min_weight": 0.0
+  },
+  "created": "2026-05-01",
+  "all_assets": [
+    {
+      "symbol": "159307",
+      "name": "Div Low-Vol 100",
+      "target_weight": 0.209278,
+      "preferred": true,
+      "risk_volatility": 0.14782549128748654,
+      "role": "low_vol"
+    },
+    {
+      "symbol": "159547",
+      "name": "Div Low-Vol",
+      "target_weight": 0.203994,
+      "preferred": true,
+      "risk_volatility": 0.16368057328004676,
+      "role": "low_vol"
+    },
+    {
+      "symbol": "159207",
+      "name": "Smart High Div",
+      "target_weight": 0.129574,
+      "preferred": true,
+      "risk_volatility": 0.16132530609868417,
+      "role": "dividend"
+    },
+    {
+      "symbol": "159222",
+      "name": "Free Cash Flow",
+      "target_weight": 0.132416,
+      "preferred": true,
+      "risk_volatility": 0.20904084861662195,
+      "role": "quality"
+    },
+    {
+      "symbol": "159259",
+      "name": "Growth 100",
+      "target_weight": 0.04052,
+      "preferred": true,
+      "risk_volatility": 0.3052823612791154,
+      "role": "growth"
+    },
+    {
+      "symbol": "159263",
+      "name": "Value 100",
+      "target_weight": 0.118402,
+      "preferred": true,
+      "risk_volatility": 0.18773326573709853,
+      "role": "dividend"
+    },
+    {
+      "symbol": "510310",
+      "name": "CSI 300 ETF",
+      "target_weight": 0.088292,
+      "preferred": true,
+      "risk_volatility": 0.17676104456501002,
+      "role": "index"
+    },
+    {
+      "symbol": "512050",
+      "name": "A500 ETF",
+      "target_weight": 0.077524,
+      "preferred": true,
+      "risk_volatility": 0.18502965546191133,
+      "role": "index"
+    }
+  ]
+}

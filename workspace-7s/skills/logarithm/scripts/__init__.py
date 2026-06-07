@@ -1,0 +1,1 @@
+# Logarithm skill - empty init

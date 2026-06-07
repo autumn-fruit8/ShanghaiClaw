@@ -1,0 +1,39 @@
+{
+  "plan_id": "cn_bond",
+  "version": 2,
+  "created": "2026-05-24",
+  "region": "CN",
+  "currency": "CNY",
+  "target_total_market_value": 500000,
+  "description": "CN bond sleeve — short/medium duration bond funds for stable cash flow and capital preservation",
+  "objective": "Stable income with low volatility: short-duration cash substitute + medium-duration yield enhancement",
+  "sleeves": [
+    {
+      "label": "short_duration",
+      "target_weight": 0.50,
+      "assets": [
+        {"symbol": "675100", "name": "West Lead Bond A", "role": "cash_substitute", "preferred": true},
+        {"symbol": "590009", "name": "中邮稳定收益债券A", "role": "cash_substitute", "preferred": true}
+      ]
+    },
+    {
+      "label": "medium_duration",
+      "target_weight": 0.50,
+      "assets": [
+        {"symbol": "001422", "name": "IGW Safe Mixed A", "role": "yield_enhancement", "preferred": true},
+        {"symbol": "000385", "name": "景顺长城景颐双利债券A", "role": "yield_enhancement", "preferred": true}
+      ]
+    }
+  ],
+  "all_assets": [
+    {"symbol": "675100", "name": "West Lead Bond A", "target_weight": 0.25, "role": "short_duration", "preferred": true},
+    {"symbol": "590009", "name": "中邮稳定收益债券A", "target_weight": 0.25, "role": "short_duration", "preferred": true},
+    {"symbol": "001422", "name": "IGW Safe Mixed A", "target_weight": 0.25, "role": "medium_duration", "preferred": true},
+    {"symbol": "000385", "name": "景顺长城景颐双利债券A", "target_weight": 0.25, "role": "medium_duration", "preferred": true}
+  ],
+  "constraints": {
+    "max_single_sleeve_drift": 0.05,
+    "max_single_asset_drift": 0.03,
+    "rebalance_cooldown_days": 30
+  }
+}

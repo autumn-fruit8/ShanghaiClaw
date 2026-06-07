@@ -1,0 +1,44 @@
+name: trend
+description: >
+  Trend momentum with tolerant exit. Buy when trending (RoC > 0, above MA200)
+  with NO volume filter (since trending assets often rise on low volume).
+  Sell only on -5% drawdown (tolerates normal pullbacks) or both MAs break.
+  Designed for trending assets like Growth 100 (159259).
+
+rules:
+  # Priority 1: Both MAs broken → clear position
+  - id: major_trend_break
+    label: Major Trend Break
+    when:
+      - price_above_ma_60: { eq: false }
+      - price_above_ma_200: { eq: false }
+    do: { verb: SELL, fraction: 1.0 }
+    signal: TREND_BREAK
+
+  # Priority 2: Deep momentum collapse → exit
+  - id: momentum_collapse
+    label: Momentum Collapse
+    when:
+      - roc: { lt: -12.0 }
+    do: { verb: SELL, fraction: 1.0 }
+    signal: MOMENTUM_COLLAPSE
+    cooldown: 20
+
+  # Priority 3: Trend entry (no volume filter — low-volume rally is normal)
+  - id: trend_entry
+    label: Trend Entry
+    when:
+      - roc: { gt: 0.0 }
+      - price_above_ma_200: { eq: true }
+    do: { verb: BUY, fraction: 1.0 }
+    signal: TREND_ENTRY
+    cooldown: 10
+
+  # Priority 4: Tolerant exit (wider -5% threshold avoids whipsaw)
+  - id: tolerant_exit
+    label: Tolerant Exit
+    when:
+      - roc: { lt: -5.0 }
+    do: { verb: SELL, fraction: 1.0 }
+    signal: TOLERANT_EXIT
+    cooldown: 5

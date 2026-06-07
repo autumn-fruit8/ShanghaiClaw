@@ -1,0 +1,45 @@
+# Secrets
+.env
+.env.local
+env-backup.zip
+
+# Generated state
+MEMORY.md
+memory/*
+!memory/README.md
+
+# IDE
+.idea/
+.vscode/
+
+# Python
+*.pyc
+__pycache__/
+*.pyo
+.pytest_cache/
+*.egg-info/
+.venv/
+venv/
+
+# Editor
+*.swo
+*.swp
+
+# 7S generated artifacts
+workspace-7s/adhoc/
+workspace-7s/apply_trade.csv
+workspace-7s/logs/*
+!workspace-7s/logs/README.md
+workspace-7s/backups/
+
+# Knowledge — raw & processed data (re-generatable)
+workspace-7s/knowledge/
+
+# Personal files
+workspace-7s/kirk_screenshot.jpg
+
+# Runtime state
+workspace-7s/.openclaw/
+
+# Temp files
+workspace-7s/tmp/

@@ -1,0 +1,36 @@
+name: deep-value
+description: All-in at extreme lows, all-out at bubble peaks. Suitable for VOLATILE assets.
+rules:
+  - id: extreme_value_entry
+    label: Extreme Value Entry
+    when:
+      - ldev: { lt: -2.0 }
+    do: { verb: BUY, fraction: 1.0 }
+    signal: EXTREME_VALUE_BUY
+    cooldown: 10
+
+  - id: deep_value_entry
+    label: Deep Value Entry
+    when:
+      - ldev: { gte: -2.0 }
+      - ldev: { lt: -1.5 }
+    do: { verb: BUY, fraction: 0.5 }
+    signal: DEEP_VALUE_ENTRY
+    cooldown: 5
+
+  - id: overheat_half_exit
+    label: Overheat Half Exit
+    when:
+      - ldev: { gte: 2.5 }
+      - ldev: { lte: 3.0 }
+    do: { verb: SELL, fraction: 0.5 }
+    signal: OVERHEAT_REDUCE
+    cooldown: 20
+
+  - id: bubble_exit
+    label: Bubble Full Exit
+    when:
+      - ldev: { gt: 3.0 }
+    do: { verb: SELL, fraction: 1.0 }
+    signal: BUBBLE_FULL_EXIT
+    cooldown: 20

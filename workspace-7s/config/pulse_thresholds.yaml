@@ -1,0 +1,44 @@
+# Pulse Thresholds — species-independent statistical classification
+# These map LDev / ZScore / RSI values to Pulse levels.
+#
+# Defaults are heuristic (±1σ/±2σ/±3σ). For production, calibrate
+# against historical LDev distributions per region:
+#   P98 LDev → EXTREME_OB boundary
+#   P90 LDev → OVERBOUGHT boundary
+#   ...
+# See docs/SIGNAL_ARCHITECTURE.md § Calibration for process.
+
+thresholds:
+  extreme_ob:
+    ldev: 3.0
+    zscore: 2.0
+    rsi: 0
+  overbought:
+    ldev: 2.0
+    zscore: 1.5
+    rsi: 70
+  strong:
+    ldev: 1.0
+    zscore: 0.5
+    rsi: 60
+  weak:
+    ldev: -1.0
+    zscore: -0.5
+    rsi: 40
+  oversold:
+    ldev: -2.0
+    zscore: -1.5
+    rsi: 30
+  extreme_os:
+    ldev: -3.0
+    zscore: -2.0
+    rsi: 0
+
+descriptions:
+  EXTREME_OB: 极度超买
+  OVERBOUGHT: 超买
+  STRONG: 偏强
+  NEUTRAL: 中性
+  WEAK: 偏弱
+  OVERSOLD: 超卖
+  EXTREME_OS: 极度超卖

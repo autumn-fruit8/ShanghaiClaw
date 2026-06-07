@@ -1,0 +1,93 @@
+# Jarvis Strategy Engine Configuration
+# =====================================
+# base_dir is resolved at load time by ConfigLoader to agents/jarvis/
+# All paths are relative to base_dir.
+
+app:
+  name: Jarvis Strategy Engine
+  version: "4.0"
+  debug: false
+
+paths:
+  base_dir: "."
+  data:
+    # 4-stage per-region knowledge pipeline
+    CN:
+      raw:       "knowledge/cn/1_raw"
+      staged:    "knowledge/cn/2_staged"
+      processed: "knowledge/cn/3_processed"
+      archive:   "knowledge/cn/4_archive"
+      logs:      "knowledge/cn/logs"
+    US:
+      raw:       "knowledge/us/1_raw"
+      staged:    "knowledge/us/2_staged"
+      processed: "knowledge/us/3_processed"
+      archive:   "knowledge/us/4_archive"
+      logs:      "knowledge/us/logs"
+
+regions:
+  CN:
+    api: akshare
+    assets:
+      - type: CN_ETF
+      - type: CN_OTC
+    network:
+      proxy_required: false
+      timeout: 30
+
+  US:
+    api: yfinance
+    assets:
+      - type: US_ETF
+      - type: HK_ETF
+    network:
+      proxy_required: true
+      timeout: 30
+
+strategy:
+  global:
+    backtest_years: 10
+    initial_cash: 100000.0
+    per_trade_cash: 1000.0
+    ma_baseline: 250
+    ma_tactical: 60
+    rsi_window: 14
+    trend_min_window: 500
+
+  steady:
+    strategic_buy_max_dev: 1.0
+    strategic_deep_val: -1.5
+    tactical_rsi_buy: 35
+    bubble_exit_dev: 3.0
+    trend_buy_max_dev: 0.5
+    trend_accum_freq: 5
+    trend_accum_power: 5.0
+    dip_accum_freq: 5
+    dip_accum_power: 1.0
+
+  volatile:
+    strategic_buy_start: -1.0
+    strategic_heavy_buy: -2.0
+    tactical_sell_z: 1.0
+    tactical_high_z: 1.5
+
+  momentum:
+    sell_level: 2.5
+    chase_buy_min_rsi: 50
+    parachute_trigger: true
+
+calibration:
+  supported_extensions:
+    - ".csv"
+    - ".xlsx"
+    - ".xls"
+    - ".mhtml"
+
+api:
+  host: "0.0.0.0"
+  port: 5005
+  cors_enabled: true
+
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
