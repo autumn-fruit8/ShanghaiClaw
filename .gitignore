@@ -43,3 +43,5 @@ workspace-7s/.openclaw/
 
 # Temp files
 workspace-7s/tmp/
+
+# But keep this placeholder so the directory exists in git
