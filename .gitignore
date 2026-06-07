@@ -45,3 +45,4 @@ workspace-7s/.openclaw/
 workspace-7s/tmp/
 
 # But keep this placeholder so the directory exists in git
+workspace-7s/scripts/
